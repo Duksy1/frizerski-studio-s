@@ -7,17 +7,14 @@
     <meta name="description" content="Frizerski studio S nudi profesionalne frizerske usluge za žene i muškarce u srcu Zagreba, na adresi Frankopanska 9. Rezervirajte svoj termin!">
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- DODANO: Google Fonts link for Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* AŽURIRANO: Postavljanje smooth-scroll-a za cijelu stranicu */
         html {
             scroll-behavior: smooth;
         }
-        /* Dodatni stilovi za transparentnost headera i mobilni meni */
         .mobile-menu {
             display: none;
             background-color: rgba(255, 255, 255, 0.85);
@@ -33,14 +30,13 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        // AŽURIRANO: Postavljanje Montserrat-a kao glavnog fonta
                         sans: ['Montserrat', 'sans-serif'],
                     },
                     colors: {
                         'brand-background': '#F4F1ED',
                         'brand-text': '#44403c',
-                        'brand-primary': '#D4AF37', // Malo prigušena zlatna/oker boja
-                        'brand-accent': '#8B4513' // SaddleBrown kao tamniji akcent
+                        'brand-primary': '#D4AF37', 
+                        'brand-accent': '#8B4513' 
                     }
                 }
             }
@@ -63,8 +59,8 @@
 
                     <!-- Logo (Image instead of Text) -->
                     <a href="#home" class="absolute left-1/2 -translate-x-1/2 md:relative md:left-auto md:translate-x-0">
-                        <!-- AŽURIRANO: Putanja sada pokazuje na lokalnu sliku u 'images' mapi -->
-                        <img src="images/naljepnica.png" alt="Studio S Logo" class="h-8 w-auto">
+                        <!-- AŽURIRANO: Postavljen vaš logo -->
+                        <img src="images/naljepnica.png" alt="Studio S Logo" class="h-10 w-auto">
                     </a>
                     
                     <!-- Desktop Nav -->
@@ -94,7 +90,7 @@
 
     <main class="pt-32">
         <!-- Hero Section -->
-        <section class="text-center container mx-auto px-6 py-16">
+        <section id="home" class="text-center container mx-auto px-6 py-16">
             <h1 class="text-4xl md:text-6xl font-bold text-stone-900 leading-tight">Umjetnost lijepe kose</h1>
             <p class="mt-4 text-lg text-stone-700 max-w-2xl mx-auto">Dobrodošli u Frizerski studio S, gdje se stručnost i kreativnost spajaju kako bi vaša kosa izgledala najbolje.</p>
             <a href="tel:+385912254811" class="mt-8 inline-block bg-amber-600 text-white font-bold text-lg py-4 px-10 rounded-xl transition-transform duration-300 hover:bg-amber-700 hover:scale-105">Nazovite za Termin</a>
@@ -105,21 +101,19 @@
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Naše Usluge</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Card 1 -->
+                    <!-- AŽURIRANO: Postavljene vaše slike. Možete promijeniti koje slike idu ovdje. -->
                     <div class="bg-white/80 p-8 rounded-2xl shadow-lg text-center">
-                        <img src="https://placehold.co/600x400/f59e0b/44403c?text=Šišanje" alt="Šišanje" class="w-full h-48 object-cover rounded-lg mb-6">
+                        <img src="images/IMG-20250416-WA0000.jpg" alt="Šišanje" class="w-full h-48 object-cover rounded-lg mb-6">
                         <h3 class="text-xl font-bold mb-2 text-stone-900">Moderno Šišanje</h3>
                         <p class="text-stone-700">Pratimo najnovije trendove kako bismo vam pružili frizuru koja odgovara vašem stilu i obliku lica.</p>
                     </div>
-                    <!-- Service Card 2 -->
                     <div class="bg-white/80 p-8 rounded-2xl shadow-lg text-center">
-                        <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Bojanje" alt="Bojanje Kose" class="w-full h-48 object-cover rounded-lg mb-6">
+                        <img src="images/IMG-20250416-WA0001.jpg" alt="Bojanje Kose" class="w-full h-48 object-cover rounded-lg mb-6">
                         <h3 class="text-xl font-bold mb-2 text-stone-900">Bojanje i Pramenovi</h3>
                         <p class="text-stone-700">Koristimo visokokvalitetne boje za savršene rezultate, od klasičnih nijansi do balayage tehnike.</p>
                     </div>
-                    <!-- Service Card 3 -->
                     <div class="bg-white/80 p-8 rounded-2xl shadow-lg text-center">
-                        <img src="https://placehold.co/600x400/D4AF37/44403c?text=Styling" alt="Styling Kose" class="w-full h-48 object-cover rounded-lg mb-6">
+                        <img src="images/IMG-20250416-WA0002.jpg" alt="Styling Kose" class="w-full h-48 object-cover rounded-lg mb-6">
                         <h3 class="text-xl font-bold mb-2 text-stone-900">Svečane Frizure</h3>
                         <p class="text-stone-700">Bilo da se radi o vjenčanju, maturi ili drugoj posebnoj prigodi, kreiramo frizuru koja će vas istaknuti.</p>
                     </div>
@@ -132,7 +126,6 @@
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Cjenik</h2>
                 <div class="max-w-4xl mx-auto bg-white/80 p-8 rounded-2xl shadow-lg space-y-8">
-
                     <!-- Muške i dječje usluge -->
                     <div>
                         <h3 class="text-xl font-bold text-stone-900 mb-4 border-b border-stone-300/50 pb-2">Muške i dječje usluge</h3>
@@ -144,7 +137,6 @@
                             <li class="flex justify-between items-center"><span class="text-stone-700">Dječije šišanje (od 6 do 12 god.)</span><span class="font-semibold text-stone-900">12.00 EUR</span></li>
                         </ul>
                     </div>
-
                     <!-- Ženske usluge -->
                     <div>
                         <h3 class="text-xl font-bold text-stone-900 mb-4 border-b border-stone-300/50 pb-2">Ženske usluge</h3>
@@ -167,7 +159,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <!-- Usluge bojanja -->
                     <div>
                         <h3 class="text-xl font-bold text-stone-900 mb-4 border-b border-stone-300/50 pb-2">Usluge bojanja</h3>
@@ -221,7 +212,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Specijalne usluge i dodaci -->
                     <div>
                         <h3 class="text-xl font-bold text-stone-900 mb-4 border-b border-stone-300/50 pb-2">Specijalne usluge i dodaci</h3>
@@ -245,21 +235,22 @@
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Galerija Naših Radova</h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- AŽURIRANO: Postavljene vaše slike iz galerije -->
                     <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg" src="https://placehold.co/500x800/D4AF37/FFFFFF?text=Rad+1" alt=""></div>
-                        <div><img class="h-auto max-w-full rounded-lg" src="https://placehold.co/500x600/8B4513/FFFFFF?text=Rad+2" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/IMG-20250416-WA0000.jpg" alt="Frizura 1"></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/IMG-20250416-WA0001.jpg" alt="Frizura 2"></div>
                     </div>
                     <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg" src="https://placehold.co/500x600/f59e0b/FFFFFF?text=Rad+3" alt=""></div>
-                        <div><img class="h-auto max-w-full rounded-lg" src="https://placehold.co/500x800/D4AF37/FFFFFF?text=Rad+4" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/IMG-20250416-WA0002.jpg" alt="Frizura 3"></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/IMG-20250416-WA0003.jpg" alt="Frizura 4"></div>
                     </div>
                     <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg" src="https://placehold.co/500x800/8B4513/FFFFFF?text=Rad+5" alt=""></div>
-                        <div><img class="h-auto max-w-full rounded-lg" src="https://placehold.co/500x600/f59e0b/FFFFFF?text=Rad+6" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/IMG-20250416-WA0004.jpg" alt="Frizura 5"></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/IMG-20250416-WA0005.jpg" alt="Frizura 6"></div>
                     </div>
                     <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg" src="https://placehold.co/500x600/D4AF37/FFFFFF?text=Rad+7" alt=""></div>
-                        <div><img class="h-auto max-w-full rounded-lg" src="https://placehold.co/500x800/8B4513/FFFFFF?text=Rad+8" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/image00002.jpeg" alt="Frizura 7"></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/image00005.jpeg" alt="Frizura 8"></div>
                     </div>
                 </div>
             </div>
@@ -319,6 +310,7 @@
     </script>
 </body>
 </html>
+
 
 
 
