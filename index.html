@@ -59,7 +59,6 @@
 
                     <!-- Logo (Image instead of Text) -->
                     <a href="#home" class="absolute left-1/2 -translate-x-1/2 md:relative md:left-auto md:translate-x-0">
-                        <!-- AŽURIRANO: Postavljen vaš logo -->
                         <img src="images/naljepnica.png" alt="Studio S Logo" class="h-10 w-auto">
                     </a>
                     
@@ -101,7 +100,6 @@
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Naše Usluge</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- AŽURIRANO: Postavljene vaše slike. Možete promijeniti koje slike idu ovdje. -->
                     <div class="bg-white/80 p-8 rounded-2xl shadow-lg text-center">
                         <img src="images/IMG-20250416-WA0000.jpg" alt="Šišanje" class="w-full h-48 object-cover rounded-lg mb-6">
                         <h3 class="text-xl font-bold mb-2 text-stone-900">Moderno Šišanje</h3>
@@ -124,19 +122,14 @@
         <!-- Cjenik Section -->
         <section id="cjenik" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Cjenik</h2>
-                <div class="max-w-4xl mx-auto bg-white/80 p-8 rounded-2xl shadow-lg space-y-8">
-                    <!-- Muške i dječje usluge -->
-                    <div>
-                        <h3 class="text-xl font-bold text-stone-900 mb-4 border-b border-stone-300/50 pb-2">Muške i dječje usluge</h3>
-                        <ul class="space-y-4">
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Muško šišanje</span><span class="font-semibold text-stone-900">12.00 EUR</span></li>
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Muško šišanje i pranje kose</span><span class="font-semibold text-stone-900">15.00 EUR</span></li>
-                             <li class="flex justify-between items-center"><span class="text-stone-700">Korekcija brade i brkova</span><span class="font-semibold text-stone-900">8.00 EUR</span></li>
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Dječije šišanje (Vrtić)</span><span class="font-semibold text-stone-900">10.00 EUR</span></li>
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Dječije šišanje (od 6 do 12 god.)</span><span class="font-semibold text-stone-900">12.00 EUR</span></li>
-                        </ul>
-                    </div>
+                <div class="flex justify-between items-center mb-12">
+                     <h2 class="text-3xl font-bold text-center text-stone-900">Cjenik</h2>
+                     <!-- AŽURIRANO: Gumb za sakrivanje/prikazivanje cjenika -->
+                     <button id="toggle-pricelist-btn" class="bg-amber-600/80 text-white font-semibold py-2 px-4 rounded-lg text-sm">Sakrij Cjenik</button>
+                </div>
+               
+                <!-- AŽURIRANO: Dodan ID za ciljanje JavaScriptom -->
+                <div id="pricelist-content" class="max-w-4xl mx-auto bg-white/80 p-8 rounded-2xl shadow-lg space-y-8">
                     <!-- Ženske usluge -->
                     <div>
                         <h3 class="text-xl font-bold text-stone-900 mb-4 border-b border-stone-300/50 pb-2">Ženske usluge</h3>
@@ -226,6 +219,17 @@
                             <li class="flex justify-between items-center"><span class="text-stone-700">Skraćivanje šiški</span><span class="font-semibold text-stone-900">8.00 EUR</span></li>
                         </ul>
                     </div>
+                    <!-- AŽURIRANO: Muške i dječje usluge premještene na kraj -->
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-4 border-b border-stone-300/50 pb-2">Muške i dječje usluge</h3>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-center"><span class="text-stone-700">Muško šišanje</span><span class="font-semibold text-stone-900">12.00 EUR</span></li>
+                            <li class="flex justify-between items-center"><span class="text-stone-700">Muško šišanje i pranje kose</span><span class="font-semibold text-stone-900">15.00 EUR</span></li>
+                             <li class="flex justify-between items-center"><span class="text-stone-700">Korekcija brade i brkova</span><span class="font-semibold text-stone-900">8.00 EUR</span></li>
+                            <li class="flex justify-between items-center"><span class="text-stone-700">Dječije šišanje (Vrtić)</span><span class="font-semibold text-stone-900">10.00 EUR</span></li>
+                            <li class="flex justify-between items-center"><span class="text-stone-700">Dječije šišanje (od 6 do 12 god.)</span><span class="font-semibold text-stone-900">12.00 EUR</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -234,23 +238,23 @@
         <section id="galerija" class="py-20 bg-white/50">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Galerija Naših Radova</h2>
+                <!-- AŽURIRANO: Poboljšan grid za galeriju -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <!-- AŽURIRANO: Postavljene vaše slike iz galerije -->
-                    <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg" src="images/IMG-20250416-WA0000.jpg" alt="Frizura 1"></div>
-                        <div><img class="h-auto max-w-full rounded-lg" src="images/IMG-20250416-WA0001.jpg" alt="Frizura 2"></div>
+                    <div class="space-y-4">
+                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/IMG-20250416-WA0000.jpg" alt="Frizura 1">
+                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/IMG-20250416-WA0001.jpg" alt="Frizura 2">
                     </div>
-                    <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg" src="images/IMG-20250416-WA0002.jpg" alt="Frizura 3"></div>
-                        <div><img class="h-auto max-w-full rounded-lg" src="images/IMG-20250416-WA0003.jpg" alt="Frizura 4"></div>
+                     <div class="space-y-4">
+                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/IMG-20250416-WA0002.jpg" alt="Frizura 3">
+                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/IMG-20250416-WA0003.jpg" alt="Frizura 4">
                     </div>
-                    <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg" src="images/IMG-20250416-WA0004.jpg" alt="Frizura 5"></div>
-                        <div><img class="h-auto max-w-full rounded-lg" src="images/IMG-20250416-WA0005.jpg" alt="Frizura 6"></div>
+                     <div class="space-y-4">
+                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/IMG-20250416-WA0004.jpg" alt="Frizura 5">
+                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/IMG-20250416-WA0005.jpg" alt="Frizura 6">
                     </div>
-                    <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg" src="images/image00002.jpeg" alt="Frizura 7"></div>
-                        <div><img class="h-auto max-w-full rounded-lg" src="images/image00005.jpeg" alt="Frizura 8"></div>
+                     <div class="space-y-4">
+                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/image00002.jpeg" alt="Frizura 7">
+                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/image00005.jpeg" alt="Frizura 8">
                     </div>
                 </div>
             </div>
@@ -307,9 +311,24 @@
                 mobileMenuButton.setAttribute('aria-expanded', 'false');
             });
         }
+
+        // AŽURIRANO: Skripta za sakrivanje/prikazivanje cjenika
+        const toggleBtn = document.getElementById('toggle-pricelist-btn');
+        const pricelist = document.getElementById('pricelist-content');
+
+        toggleBtn.addEventListener('click', () => {
+            pricelist.classList.toggle('hidden');
+            if (pricelist.classList.contains('hidden')) {
+                toggleBtn.textContent = 'Prikaži Cjenik';
+            } else {
+                toggleBtn.textContent = 'Sakrij Cjenik';
+            }
+        });
     </script>
 </body>
 </html>
+
+
 
 
 
