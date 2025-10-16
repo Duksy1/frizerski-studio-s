@@ -123,13 +123,12 @@
 
         <section id="cjenik" class="py-20">
             <div class="container mx-auto px-6">
-                <div class="flex justify-center md:justify-between items-center mb-8 md:mb-12">
+                <div class="flex flex-col md:flex-row justify-center md:justify-between items-center mb-8 md:mb-12 gap-4 md:gap-0">
                      <h2 class="text-3xl font-bold text-stone-900">Cjenik</h2>
-                     <button id="toggle-pricelist-btn" class="hidden md:inline-block border border-stone-400 text-stone-700 font-semibold py-2 px-4 rounded-lg text-sm transition hover:bg-stone-200/50">Sakrij Cjenik</button>
+                     <button id="toggle-pricelist-btn" class="border border-stone-400 text-stone-700 font-semibold py-2 px-4 rounded-lg text-sm transition hover:bg-stone-200/50">Sakrij Cjenik</button>
                 </div>
                
                 <div id="pricelist-content" class="max-w-4xl mx-auto bg-white/80 p-6 md:p-8 rounded-2xl shadow-lg space-y-8">
-                    <!-- AŽURIRANO: Tablični prikaz cjenika -->
                     <div class="overflow-x-auto">
                         <div class="min-w-full text-sm">
                             <!-- Ženske usluge -->
@@ -236,7 +235,6 @@
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Galerija Naših Radova</h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <!-- AŽURIRANO: Uniformni grid za slike -->
                     <a href="images/IMG-20250416-WA0000.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/IMG-20250416-WA0000.jpg" alt="Frizura 1"></a>
                     <a href="images/IMG-20250416-WA0001.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/IMG-20250416-WA0001.jpg" alt="Frizura 2"></a>
                     <a href="images/IMG-20250416-WA0002.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/IMG-20250416-WA0002.jpg" alt="Frizura 3"></a>
@@ -298,11 +296,11 @@
         }
 
         const toggleBtn = document.getElementById('toggle-pricelist-btn');
-        const pricelist = document.getElementById('pricelist-content');
+        const pricelistContent = document.getElementById('pricelist-content');
 
         toggleBtn.addEventListener('click', () => {
-            pricelist.classList.toggle('pricelist-hidden');
-            if (pricelist.classList.contains('pricelist-hidden')) {
+            pricelistContent.classList.toggle('pricelist-hidden');
+            if (pricelistContent.classList.contains('pricelist-hidden')) {
                 toggleBtn.textContent = 'Prikaži Cjenik';
             } else {
                 toggleBtn.textContent = 'Sakrij Cjenik';
@@ -311,6 +309,7 @@
     </script>
 </body>
 </html>
+
 
 
 
