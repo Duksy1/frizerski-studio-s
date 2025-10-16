@@ -24,6 +24,18 @@
             padding: 1rem;
             margin-top: 1rem;
         }
+        /* Dodatni stil za tranziciju na pricelist-content */
+        #pricelist-content {
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+        }
+        .pricelist-hidden {
+            max-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            opacity: 0;
+            margin-top: -1rem; /* Da se smanji razmak */
+        }
     </style>
     <script>
         tailwind.config = {
@@ -50,19 +62,14 @@
         <div id="header-bg" class="max-w-5xl mx-auto bg-white/60 backdrop-blur-lg border border-black/10 shadow-lg rounded-2xl transition-all duration-300">
             <div class="container mx-auto px-6 py-3">
                 <div class="flex items-center justify-between relative">
-                    <!-- Mobile Menu Button (Left) -->
                     <div class="md:hidden">
                         <button id="mobile-menu-button" class="text-stone-900 focus:outline-none">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                         </button>
                     </div>
-
-                    <!-- Logo (Image instead of Text) -->
                     <a href="#home" class="absolute left-1/2 -translate-x-1/2 md:relative md:left-auto md:translate-x-0">
                         <img src="images/naljepnica.png" alt="Studio S Logo" class="h-10 w-auto">
                     </a>
-                    
-                    <!-- Desktop Nav -->
                     <nav class="hidden md:flex items-center space-x-8">
                         <a href="#usluge" class="text-stone-700 hover:text-stone-900 transition">Usluge</a>
                         <a href="#cjenik" class="text-stone-700 hover:text-stone-900 transition">Cjenik</a>
@@ -70,13 +77,10 @@
                         <a href="#kontakt" class="text-stone-700 hover:text-stone-900 transition">Kontakt</a>
                         <a href="tel:+385912254811" class="bg-amber-600 text-white font-semibold py-2 px-5 rounded-lg transition-transform duration-300 hover:bg-amber-700 hover:scale-105">Rezerviraj</a>
                     </nav>
-
-                    <!-- Mobile Rezerviraj Button (Right) -->
                     <div class="md:hidden">
                          <a href="tel:+385912254811" class="bg-amber-600 text-white font-semibold py-2 px-4 rounded-lg text-xs">Rezerviraj</a>
                     </div>
                 </div>
-                 <!-- Mobile Menu -->
                 <div id="mobile-menu" class="mobile-menu md:hidden">
                     <a href="#usluge" class="block py-2 px-4 text-stone-700 hover:bg-stone-200/50 rounded">Usluge</a>
                     <a href="#cjenik" class="block py-2 px-4 text-stone-700 hover:bg-stone-200/50 rounded">Cjenik</a>
@@ -88,14 +92,12 @@
     </header>
 
     <main class="pt-32">
-        <!-- Hero Section -->
         <section id="home" class="text-center container mx-auto px-6 py-16">
             <h1 class="text-4xl md:text-6xl font-bold text-stone-900 leading-tight">Umjetnost lijepe kose</h1>
             <p class="mt-4 text-lg text-stone-700 max-w-2xl mx-auto">Dobrodošli u Frizerski studio S, gdje se stručnost i kreativnost spajaju kako bi vaša kosa izgledala najbolje.</p>
             <a href="tel:+385912254811" class="mt-8 inline-block bg-amber-600 text-white font-bold text-lg py-4 px-10 rounded-xl transition-transform duration-300 hover:bg-amber-700 hover:scale-105">Nazovite za Termin</a>
         </section>
 
-        <!-- Usluge Section -->
         <section id="usluge" class="py-20 bg-white/50">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Naše Usluge</h2>
@@ -119,148 +121,134 @@
             </div>
         </section>
 
-        <!-- Cjenik Section -->
         <section id="cjenik" class="py-20">
             <div class="container mx-auto px-6">
-                <div class="flex justify-between items-center mb-12">
-                     <h2 class="text-3xl font-bold text-center text-stone-900">Cjenik</h2>
-                     <!-- AŽURIRANO: Gumb za sakrivanje/prikazivanje cjenika -->
-                     <button id="toggle-pricelist-btn" class="bg-amber-600/80 text-white font-semibold py-2 px-4 rounded-lg text-sm">Sakrij Cjenik</button>
+                <div class="flex justify-center md:justify-between items-center mb-8 md:mb-12">
+                     <h2 class="text-3xl font-bold text-stone-900">Cjenik</h2>
+                     <button id="toggle-pricelist-btn" class="hidden md:inline-block border border-stone-400 text-stone-700 font-semibold py-2 px-4 rounded-lg text-sm transition hover:bg-stone-200/50">Sakrij Cjenik</button>
                 </div>
                
-                <!-- AŽURIRANO: Dodan ID za ciljanje JavaScriptom -->
-                <div id="pricelist-content" class="max-w-4xl mx-auto bg-white/80 p-8 rounded-2xl shadow-lg space-y-8">
-                    <!-- Ženske usluge -->
-                    <div>
-                        <h3 class="text-xl font-bold text-stone-900 mb-4 border-b border-stone-300/50 pb-2">Ženske usluge</h3>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between items-center font-semibold text-stone-800"><p>Pranje kose i frizura</p></div>
-                                <ul class="pl-4 space-y-2 mt-2">
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(KRATKA KOSA)</span><span class="font-medium text-stone-800">14.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(SREDNJA KOSA)</span><span class="font-medium text-stone-800">16.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(DUGA KOSA)</span><span class="font-medium text-stone-800">20.00 EUR</span></li>
-                                </ul>
+                <div id="pricelist-content" class="max-w-4xl mx-auto bg-white/80 p-6 md:p-8 rounded-2xl shadow-lg space-y-8">
+                    <!-- AŽURIRANO: Tablični prikaz cjenika -->
+                    <div class="overflow-x-auto">
+                        <div class="min-w-full text-sm">
+                            <!-- Ženske usluge -->
+                            <div class="mb-6">
+                                <h3 class="text-xl font-bold text-stone-900 mb-4 pb-2">Ženske usluge</h3>
+                                <div class="grid grid-cols-4 gap-x-4 gap-y-2 pb-2 font-semibold text-stone-600 border-b border-stone-300/50">
+                                    <div class="col-span-1">Usluga</div>
+                                    <div class="text-right">Kratka</div>
+                                    <div class="text-right">Srednja</div>
+                                    <div class="text-right">Duga</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3 border-b border-stone-300/50 pb-3">
+                                    <div class="col-span-1 text-stone-800 font-medium">Pranje kose i frizura</div>
+                                    <div class="text-right font-semibold">14.00 €</div>
+                                    <div class="text-right font-semibold">16.00 €</div>
+                                    <div class="text-right font-semibold">20.00 €</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3">
+                                    <div class="col-span-1 text-stone-800 font-medium">Šišanje i frizura</div>
+                                    <div class="text-right font-semibold">25.00 €</div>
+                                    <div class="text-right font-semibold">28.00 €</div>
+                                    <div class="text-right font-semibold">30.00 €</div>
+                                </div>
                             </div>
-                             <div>
-                                <div class="flex justify-between items-center font-semibold text-stone-800"><p>Šišanje i frizura</p></div>
-                                <ul class="pl-4 space-y-2 mt-2">
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(KRATKA KOSA)</span><span class="font-medium text-stone-800">25.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(SREDNJA KOSA)</span><span class="font-medium text-stone-800">28.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(DUGA KOSA)</span><span class="font-medium text-stone-800">30.00 EUR</span></li>
-                                </ul>
+                             <!-- Usluge bojanja -->
+                             <div class="mb-6">
+                                <h3 class="text-xl font-bold text-stone-900 mb-4 pb-2">Usluge bojanja</h3>
+                                <div class="grid grid-cols-4 gap-x-4 gap-y-2 pb-2 font-semibold text-stone-600 border-b border-stone-300/50">
+                                    <div class="col-span-1">Usluga</div>
+                                    <div class="text-right">Kratka</div>
+                                    <div class="text-right">Srednja</div>
+                                    <div class="text-right">Duga</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3 border-b border-stone-300/50 pb-3">
+                                    <div class="col-span-1 text-stone-800 font-medium">Bojanje i frizura</div>
+                                    <div class="text-right font-semibold">42.00 €</div>
+                                    <div class="text-right font-semibold">48.00 €</div>
+                                    <div class="text-right font-semibold">55.00 €</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3 border-b border-stone-300/50 pb-3">
+                                    <div class="col-span-1 text-stone-800 font-medium">Bojanje, šišanje i frizura</div>
+                                    <div class="text-right font-semibold">44.00 €</div>
+                                    <div class="text-right font-semibold">52.00 €</div>
+                                    <div class="text-right font-semibold">55.00 €</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3 border-b border-stone-300/50 pb-3">
+                                    <div class="col-span-1 text-stone-800 font-medium">Pramenovi i frizura</div>
+                                    <div class="text-right font-semibold">52.00 €</div>
+                                    <div class="text-right font-semibold">58.00 €</div>
+                                    <div class="text-right font-semibold">65.00 €</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3 border-b border-stone-300/50 pb-3">
+                                    <div class="col-span-1 text-stone-800 font-medium">Pramenovi, šišanje i frizura</div>
+                                    <div class="text-right font-semibold">55.00 €</div>
+                                    <div class="text-right font-semibold">62.00 €</div>
+                                    <div class="text-right font-semibold">68.00 €</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3 border-b border-stone-300/50 pb-3">
+                                    <div class="col-span-1 text-stone-800 font-medium">Ombre, šišanje i frizura</div>
+                                    <div class="text-right font-semibold">-</div>
+                                    <div class="text-right font-semibold">48.00 €</div>
+                                    <div class="text-right font-semibold">55.00 €</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3">
+                                    <div class="col-span-1 text-stone-800 font-medium">Preljev, šišanje i frizura</div>
+                                    <div class="text-right font-semibold">36.00 €</div>
+                                    <div class="text-right font-semibold">40.00 €</div>
+                                    <div class="text-right font-semibold">45.00 €</div>
+                                </div>
+                            </div>
+                            <!-- Specijalne i muške usluge -->
+                            <div class="grid md:grid-cols-2 gap-x-8">
+                                <div>
+                                    <h3 class="text-xl font-bold text-stone-900 mb-4 pb-2">Specijalne usluge</h3>
+                                    <ul class="space-y-3 text-sm">
+                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Svečana frizura</span><span class="font-semibold text-stone-900">od 25.00 €</span></li>
+                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Frizura valovi</span><span class="font-semibold text-stone-900">od 25.00 €</span></li>
+                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Riblja kost pletenica</span><span class="font-semibold text-stone-900">od 20.00 €</span></li>
+                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Minival, šišanje i frizura</span><span class="font-semibold text-stone-900">od 40.00 €</span></li>
+                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Skidanje/prepigmentacija</span><span class="font-semibold text-stone-900">od 15.00 €</span></li>
+                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Patiniranje pramenova</span><span class="font-semibold text-stone-900">od 22.00 €</span></li>
+                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Maska/masaža/ampula</span><span class="font-semibold text-stone-900">5.00 €</span></li>
+                                        <li class="flex justify-between items-center"><span class="text-stone-700">Skraćivanje šiški</span><span class="font-semibold text-stone-900">8.00 €</span></li>
+                                    </ul>
+                                </div>
+                                <div class="mt-6 md:mt-0">
+                                    <h3 class="text-xl font-bold text-stone-900 mb-4 pb-2">Muške i dječje usluge</h3>
+                                    <ul class="space-y-3 text-sm">
+                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Muško šišanje</span><span class="font-semibold text-stone-900">12.00 €</span></li>
+                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Muško šišanje i pranje</span><span class="font-semibold text-stone-900">15.00 €</span></li>
+                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Korekcija brade i brkova</span><span class="font-semibold text-stone-900">8.00 €</span></li>
+                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Dječije šišanje (Vrtić)</span><span class="font-semibold text-stone-900">10.00 €</span></li>
+                                        <li class="flex justify-between items-center"><span class="text-stone-700">Dječije šišanje (6-12 god.)</span><span class="font-semibold text-stone-900">12.00 €</span></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Usluge bojanja -->
-                    <div>
-                        <h3 class="text-xl font-bold text-stone-900 mb-4 border-b border-stone-300/50 pb-2">Usluge bojanja</h3>
-                         <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between items-center font-semibold text-stone-800"><p>Bojanje i frizura</p></div>
-                                <ul class="pl-4 space-y-2 mt-2">
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(KRATKA KOSA)</span><span class="font-medium text-stone-800">42.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(SREDNJA KOSA)</span><span class="font-medium text-stone-800">48.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(DUGA KOSA)</span><span class="font-medium text-stone-800">55.00 EUR</span></li>
-                                </ul>
-                            </div>
-                             <div>
-                                <div class="flex justify-between items-center font-semibold text-stone-800"><p>Bojanje, šišanje i frizura</p></div>
-                                <ul class="pl-4 space-y-2 mt-2">
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(KRATKA KOSA)</span><span class="font-medium text-stone-800">44.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(SREDNJA KOSA)</span><span class="font-medium text-stone-800">52.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(DUGA KOSA)</span><span class="font-medium text-stone-800">55.00 EUR</span></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <div class="flex justify-between items-center font-semibold text-stone-800"><p>Pramenovi i frizura</p></div>
-                                <ul class="pl-4 space-y-2 mt-2">
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(KRATKA KOSA)</span><span class="font-medium text-stone-800">52.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(SREDNJA KOSA)</span><span class="font-medium text-stone-800">58.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(DUGA KOSA)</span><span class="font-medium text-stone-800">65.00 EUR</span></li>
-                                </ul>
-                            </div>
-                             <div>
-                                <div class="flex justify-between items-center font-semibold text-stone-800"><p>Pramenovi, šišanje i frizura</p></div>
-                                <ul class="pl-4 space-y-2 mt-2">
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(KRATKA KOSA)</span><span class="font-medium text-stone-800">55.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(SREDNJA KOSA)</span><span class="font-medium text-stone-800">62.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(DUGA KOSA)</span><span class="font-medium text-stone-800">68.00 EUR</span></li>
-                                </ul>
-                            </div>
-                             <div>
-                                <div class="flex justify-between items-center font-semibold text-stone-800"><p>Ombre pramenovi, šišanje i frizura</p></div>
-                                <ul class="pl-4 space-y-2 mt-2">
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(SREDNJA KOSA)</span><span class="font-medium text-stone-800">48.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(DUGA KOSA)</span><span class="font-medium text-stone-800">55.00 EUR</span></li>
-                                </ul>
-                            </div>
-                             <div>
-                                <div class="flex justify-between items-center font-semibold text-stone-800"><p>Preljev, šišanje i frizura</p></div>
-                                <ul class="pl-4 space-y-2 mt-2">
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(KRATKA KOSA)</span><span class="font-medium text-stone-800">36.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(SREDNJA KOSA)</span><span class="font-medium text-stone-800">40.00 EUR</span></li>
-                                    <li class="flex justify-between items-center text-sm"><span class="text-stone-600">(DUGA KOSA)</span><span class="font-medium text-stone-800">45.00 EUR</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Specijalne usluge i dodaci -->
-                    <div>
-                        <h3 class="text-xl font-bold text-stone-900 mb-4 border-b border-stone-300/50 pb-2">Specijalne usluge i dodaci</h3>
-                        <ul class="space-y-4">
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Svečana frizura</span><span class="font-semibold text-stone-900">od 25.00 EUR</span></li>
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Frizura valovi</span><span class="font-semibold text-stone-900">od 25.00 EUR</span></li>
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Riblja kost pletenica</span><span class="font-semibold text-stone-900">od 20.00 EUR</span></li>
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Minival, šišanje i frizura</span><span class="font-semibold text-stone-900">od 40.00 EUR</span></li>
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Skidanje pigmenta, prepigmentacija</span><span class="font-semibold text-stone-900">od 15.00 EUR</span></li>
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Patiniranje pramenova</span><span class="font-semibold text-stone-900">od 22.00 EUR</span></li>
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Maska, masaža, ampula (pojedinačno)</span><span class="font-semibold text-stone-900">5.00 EUR</span></li>
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Skraćivanje šiški</span><span class="font-semibold text-stone-900">8.00 EUR</span></li>
-                        </ul>
-                    </div>
-                    <!-- AŽURIRANO: Muške i dječje usluge premještene na kraj -->
-                    <div>
-                        <h3 class="text-xl font-bold text-stone-900 mb-4 border-b border-stone-300/50 pb-2">Muške i dječje usluge</h3>
-                        <ul class="space-y-4">
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Muško šišanje</span><span class="font-semibold text-stone-900">12.00 EUR</span></li>
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Muško šišanje i pranje kose</span><span class="font-semibold text-stone-900">15.00 EUR</span></li>
-                             <li class="flex justify-between items-center"><span class="text-stone-700">Korekcija brade i brkova</span><span class="font-semibold text-stone-900">8.00 EUR</span></li>
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Dječije šišanje (Vrtić)</span><span class="font-semibold text-stone-900">10.00 EUR</span></li>
-                            <li class="flex justify-between items-center"><span class="text-stone-700">Dječije šišanje (od 6 do 12 god.)</span><span class="font-semibold text-stone-900">12.00 EUR</span></li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Galerija Section -->
         <section id="galerija" class="py-20 bg-white/50">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Galerija Naših Radova</h2>
-                <!-- AŽURIRANO: Poboljšan grid za galeriju -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="space-y-4">
-                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/IMG-20250416-WA0000.jpg" alt="Frizura 1">
-                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/IMG-20250416-WA0001.jpg" alt="Frizura 2">
-                    </div>
-                     <div class="space-y-4">
-                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/IMG-20250416-WA0002.jpg" alt="Frizura 3">
-                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/IMG-20250416-WA0003.jpg" alt="Frizura 4">
-                    </div>
-                     <div class="space-y-4">
-                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/IMG-20250416-WA0004.jpg" alt="Frizura 5">
-                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/IMG-20250416-WA0005.jpg" alt="Frizura 6">
-                    </div>
-                     <div class="space-y-4">
-                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/image00002.jpeg" alt="Frizura 7">
-                        <img class="h-auto max-w-full rounded-lg object-cover" src="images/image00005.jpeg" alt="Frizura 8">
-                    </div>
+                    <!-- AŽURIRANO: Uniformni grid za slike -->
+                    <a href="images/IMG-20250416-WA0000.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/IMG-20250416-WA0000.jpg" alt="Frizura 1"></a>
+                    <a href="images/IMG-20250416-WA0001.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/IMG-20250416-WA0001.jpg" alt="Frizura 2"></a>
+                    <a href="images/IMG-20250416-WA0002.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/IMG-20250416-WA0002.jpg" alt="Frizura 3"></a>
+                    <a href="images/IMG-20250416-WA0003.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/IMG-20250416-WA0003.jpg" alt="Frizura 4"></a>
+                    <a href="images/IMG-20250416-WA0004.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/IMG-20250416-WA0004.jpg" alt="Frizura 5"></a>
+                    <a href="images/IMG-20250416-WA0005.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/IMG-20250416-WA0005.jpg" alt="Frizura 6"></a>
+                    <a href="images/image00002.jpeg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/image00002.jpeg" alt="Frizura 7"></a>
+                    <a href="images/image00005.jpeg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/image00005.jpeg" alt="Frizura 8"></a>
                 </div>
             </div>
         </section>
 
-        <!-- Kontakt Section -->
         <section id="kontakt" class="py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center">
@@ -277,7 +265,7 @@
                         </div>
                     </div>
                     <div class="md:w-1/2 h-80 md:h-auto rounded-2xl shadow-lg overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.564748192134!2d15.969968876856525!3d45.8093149710815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6e2a2231509%3A0x695c7379203a382e!2sFrankopanska%20ul.%209%2C%2010000%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1714486518178!5m2!1shr!2shr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.564748192134!2d15.969968876856525!3d45.8093149710815!2m3!1f0!2f0!3f0!3m2!i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6e2a2231509%3A0x695c7379203a382e!2sFrankopanska%20ul.%209%2C%2010000%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1714486518178!5m2!1shr!2shr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -291,10 +279,8 @@
     </footer>
 
     <script>
-        // Godina za footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Skripta za mobilni meni
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
@@ -303,7 +289,6 @@
             mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
         });
 
-        // Skripta za zatvaranje menija nakon klika na link
         const menuLinks = mobileMenu.getElementsByTagName('a');
         for (let i = 0; i < menuLinks.length; i++) {
             menuLinks[i].addEventListener('click', () => {
@@ -312,13 +297,12 @@
             });
         }
 
-        // AŽURIRANO: Skripta za sakrivanje/prikazivanje cjenika
         const toggleBtn = document.getElementById('toggle-pricelist-btn');
         const pricelist = document.getElementById('pricelist-content');
 
         toggleBtn.addEventListener('click', () => {
-            pricelist.classList.toggle('hidden');
-            if (pricelist.classList.contains('hidden')) {
+            pricelist.classList.toggle('pricelist-hidden');
+            if (pricelist.classList.contains('pricelist-hidden')) {
                 toggleBtn.textContent = 'Prikaži Cjenik';
             } else {
                 toggleBtn.textContent = 'Sakrij Cjenik';
