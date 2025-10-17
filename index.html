@@ -24,7 +24,6 @@
             padding: 1rem;
             margin-top: 1rem;
         }
-        /* Dodatni stil za tranziciju na pricelist-content */
         #pricelist-content {
             transition: all 0.3s ease-in-out;
             overflow: hidden;
@@ -34,7 +33,35 @@
             padding-top: 0;
             padding-bottom: 0;
             opacity: 0;
-            margin-top: -1rem; /* Da se smanji razmak */
+            margin-top: -1rem;
+        }
+        
+        /* AŽURIRANO: Stilovi za Flip Card efekt */
+        .flip-card {
+            perspective: 1000px; /* Stvara 3D prostor */
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.7s;
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* za Safari */
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flip-card-back {
+            transform: rotateY(180deg);
         }
     </style>
     <script>
@@ -98,25 +125,48 @@
             <a href="tel:+385912254811" class="mt-8 inline-block bg-amber-600 text-white font-bold text-lg py-4 px-10 rounded-xl transition-transform duration-300 hover:bg-amber-700 hover:scale-105">Nazovite za Termin</a>
         </section>
 
+        <!-- AŽURIRANO: Sekcija Usluge sa Flip Card efektom -->
         <section id="usluge" class="py-20 bg-white/50">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Naše Usluge</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white/80 p-8 rounded-2xl shadow-lg text-center">
-                        <img src="images/IMG-20250416-WA0000.jpg" alt="Šišanje" class="w-full h-48 object-cover rounded-lg mb-6">
-                        <h3 class="text-xl font-bold mb-2 text-stone-900">Moderno Šišanje</h3>
-                        <p class="text-stone-700">Pratimo najnovije trendove kako bismo vam pružili frizuru koja odgovara vašem stilu i obliku lica.</p>
+                    
+                    <!-- Flip Kartica 1: Šišanje -->
+                    <div class="flip-card h-56">
+                        <div class="flip-card-inner shadow-lg rounded-2xl">
+                            <div class="flip-card-front bg-white/80 rounded-2xl p-6">
+                                <h3 class="text-2xl font-bold text-stone-900">Moderno Šišanje</h3>
+                            </div>
+                            <div class="flip-card-back bg-brand-accent text-white rounded-2xl p-6 text-center">
+                                <p>Pratimo najnovije trendove kako bismo vam pružili frizuru koja odgovara vašem stilu i obliku lica.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-white/80 p-8 rounded-2xl shadow-lg text-center">
-                        <img src="images/IMG-20250416-WA0001.jpg" alt="Bojanje Kose" class="w-full h-48 object-cover rounded-lg mb-6">
-                        <h3 class="text-xl font-bold mb-2 text-stone-900">Bojanje i Pramenovi</h3>
-                        <p class="text-stone-700">Koristimo visokokvalitetne boje za savršene rezultate, od klasičnih nijansi do balayage tehnike.</p>
+
+                    <!-- Flip Kartica 2: Bojanje -->
+                    <div class="flip-card h-56">
+                        <div class="flip-card-inner shadow-lg rounded-2xl">
+                            <div class="flip-card-front bg-white/80 rounded-2xl p-6">
+                                <h3 class="text-2xl font-bold text-stone-900">Bojanje i Pramenovi</h3>
+                            </div>
+                            <div class="flip-card-back bg-brand-accent text-white rounded-2xl p-6 text-center">
+                                <p>Koristimo visokokvalitetne boje za savršene rezultate, od klasičnih nijansi do balayage tehnike.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-white/80 p-8 rounded-2xl shadow-lg text-center">
-                        <img src="images/IMG-20250416-WA0002.jpg" alt="Styling Kose" class="w-full h-48 object-cover rounded-lg mb-6">
-                        <h3 class="text-xl font-bold mb-2 text-stone-900">Svečane Frizure</h3>
-                        <p class="text-stone-700">Bilo da se radi o vjenčanju, maturi ili drugoj posebnoj prigodi, kreiramo frizuru koja će vas istaknuti.</p>
+
+                    <!-- Flip Kartica 3: Frizure -->
+                    <div class="flip-card h-56">
+                        <div class="flip-card-inner shadow-lg rounded-2xl">
+                            <div class="flip-card-front bg-white/80 rounded-2xl p-6">
+                                <h3 class="text-2xl font-bold text-stone-900">Svečane Frizure</h3>
+                            </div>
+                            <div class="flip-card-back bg-brand-accent text-white rounded-2xl p-6 text-center">
+                                <p>Bilo da se radi o vjenčanju, maturi ili drugoj posebnoj prigodi, kreiramo frizuru koja će vas istaknuti.</p>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -131,7 +181,6 @@
                 <div id="pricelist-content" class="max-w-4xl mx-auto bg-white/80 p-6 md:p-8 rounded-2xl shadow-lg space-y-8">
                     <div class="overflow-x-auto">
                         <div class="min-w-full text-sm">
-                            <!-- Ženske usluge -->
                             <div class="mb-6">
                                 <h3 class="text-xl font-bold text-stone-900 mb-4 pb-2">Ženske usluge</h3>
                                 <div class="grid grid-cols-4 gap-x-4 gap-y-2 pb-2 font-semibold text-stone-600 border-b border-stone-300/50">
@@ -153,7 +202,6 @@
                                     <div class="text-right font-semibold">30.00 €</div>
                                 </div>
                             </div>
-                             <!-- Usluge bojanja -->
                              <div class="mb-6">
                                 <h3 class="text-xl font-bold text-stone-900 mb-4 pb-2">Usluge bojanja</h3>
                                 <div class="grid grid-cols-4 gap-x-4 gap-y-2 pb-2 font-semibold text-stone-600 border-b border-stone-300/50">
@@ -199,7 +247,6 @@
                                     <div class="text-right font-semibold">45.00 €</div>
                                 </div>
                             </div>
-                            <!-- Specijalne i muške usluge -->
                             <div class="grid md:grid-cols-2 gap-x-8">
                                 <div>
                                     <h3 class="text-xl font-bold text-stone-900 mb-4 pb-2">Specijalne usluge</h3>
@@ -309,6 +356,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 
