@@ -36,9 +36,9 @@
             margin-top: -1rem;
         }
         
-        /* AŽURIRANO: Stilovi za Flip Card efekt */
+        /* Stilovi za Flip Card efekt */
         .flip-card {
-            perspective: 1000px; /* Stvara 3D prostor */
+            perspective: 1000px;
         }
         .flip-card-inner {
             position: relative;
@@ -54,7 +54,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            -webkit-backface-visibility: hidden; /* za Safari */
+            -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
             display: flex;
             align-items: center;
@@ -74,8 +74,8 @@
                     colors: {
                         'brand-background': '#F4F1ED',
                         'brand-text': '#44403c',
-                        'brand-primary': '#D4AF37', 
-                        'brand-accent': '#8B4513' 
+                        'brand-primary': '#F57C00', /* AŽURIRANO: Novi primarni CTA */
+                        'brand-accent': '#D87000'  /* AŽURIRANO: Slična boja za flip card i hover */
                     }
                 }
             }
@@ -102,10 +102,10 @@
                         <a href="#cjenik" class="text-stone-700 hover:text-stone-900 transition">Cjenik</a>
                         <a href="#galerija" class="text-stone-700 hover:text-stone-900 transition">Galerija</a>
                         <a href="#kontakt" class="text-stone-700 hover:text-stone-900 transition">Kontakt</a>
-                        <a href="tel:+385912254811" class="bg-amber-600 text-white font-semibold py-2 px-5 rounded-lg transition-transform duration-300 hover:bg-amber-700 hover:scale-105">Rezerviraj</a>
+                        <a href="tel:+385912254811" class="bg-brand-primary text-white font-semibold py-2 px-5 rounded-lg transition-transform duration-300 hover:bg-brand-accent hover:scale-105">Rezerviraj</a>
                     </nav>
                     <div class="md:hidden">
-                         <a href="tel:+385912254811" class="bg-amber-600 text-white font-semibold py-2 px-4 rounded-lg text-xs">Rezerviraj</a>
+                         <a href="tel:+385912254811" class="bg-brand-primary text-white font-semibold py-2 px-4 rounded-lg text-xs">Rezerviraj</a>
                     </div>
                 </div>
                 <div id="mobile-menu" class="mobile-menu md:hidden">
@@ -122,16 +122,14 @@
         <section id="home" class="text-center container mx-auto px-6 py-16">
             <h1 class="text-4xl md:text-6xl font-bold text-stone-900 leading-tight">Umjetnost lijepe kose</h1>
             <p class="mt-4 text-lg text-stone-700 max-w-2xl mx-auto">Dobrodošli u Frizerski studio S, gdje se stručnost i kreativnost spajaju kako bi vaša kosa izgledala najbolje.</p>
-            <a href="tel:+385912254811" class="mt-8 inline-block bg-amber-600 text-white font-bold text-lg py-4 px-10 rounded-xl transition-transform duration-300 hover:bg-amber-700 hover:scale-105">Nazovite za Termin</a>
+            <a href="tel:+385912254811" class="mt-8 inline-block bg-brand-primary text-white font-bold text-lg py-4 px-10 rounded-xl transition-transform duration-300 hover:bg-brand-accent hover:scale-105">Nazovite za Termin</a>
         </section>
 
-        <!-- AŽURIRANO: Sekcija Usluge sa Flip Card efektom -->
         <section id="usluge" class="py-20 bg-white/50">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Naše Usluge</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <!-- Flip Kartica 1: Šišanje -->
                     <div class="flip-card h-56">
                         <div class="flip-card-inner shadow-lg rounded-2xl">
                             <div class="flip-card-front bg-white/80 rounded-2xl p-6">
@@ -143,7 +141,6 @@
                         </div>
                     </div>
 
-                    <!-- Flip Kartica 2: Bojanje -->
                     <div class="flip-card h-56">
                         <div class="flip-card-inner shadow-lg rounded-2xl">
                             <div class="flip-card-front bg-white/80 rounded-2xl p-6">
@@ -155,7 +152,6 @@
                         </div>
                     </div>
 
-                    <!-- Flip Kartica 3: Frizure -->
                     <div class="flip-card h-56">
                         <div class="flip-card-inner shadow-lg rounded-2xl">
                             <div class="flip-card-front bg-white/80 rounded-2xl p-6">
@@ -305,7 +301,7 @@
                         <h3 class="text-xl font-bold text-stone-900 mb-4">Informacije</h3>
                         <div class="space-y-4 text-stone-700">
                             <p><strong>Adresa:</strong><br>Frankopanska 9, 10000 Zagreb</p>
-                            <p><strong>Telefon:</strong><br><a href="tel:+385912254811" class="text-amber-600 hover:underline">+385 91 225 4811</a></p>
+                            <p><strong>Telefon:</strong><br><a href="tel:+385912254811" class="text-brand-primary hover:underline">+385 91 225 4811</a></p>
                             <p><strong>Radno vrijeme:</strong><br>Pon - Pet: 09:00 - 20:00<br>Sub: 09:00 - 15:00</p>
                         </div>
                     </div>
@@ -356,6 +352,7 @@
     </script>
 </body>
 </html>
+
 
 
 
