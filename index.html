@@ -84,7 +84,6 @@
 </head>
 <body class="bg-brand-background text-brand-text font-sans antialiased">
 
-    <!-- Header -->
     <header class="fixed w-full z-50 top-0 left-0 p-4">
         <div id="header-bg" class="max-w-5xl mx-auto bg-white/60 backdrop-blur-lg border border-black/10 shadow-lg rounded-2xl transition-all duration-300">
             <div class="container mx-auto px-6 py-3">
@@ -99,7 +98,6 @@
                     </a>
                     <nav class="hidden md:flex items-center space-x-8">
                         <a href="#usluge" class="text-stone-700 hover:text-stone-900 transition">Usluge</a>
-                        <!-- DODANO: Link za novu sekciju -->
                         <a href="#stats-section" class="text-stone-700 hover:text-stone-900 transition">O Nama</a>
                         <a href="#cjenik" class="text-stone-700 hover:text-stone-900 transition">Cjenik</a>
                         <a href="#galerija" class="text-stone-700 hover:text-stone-900 transition">Galerija</a>
@@ -112,7 +110,6 @@
                 </div>
                 <div id="mobile-menu" class="mobile-menu md:hidden">
                     <a href="#usluge" class="block py-2 px-4 text-stone-700 hover:bg-stone-200/50 rounded">Usluge</a>
-                    <!-- DODANO: Link za novu sekciju -->
                     <a href="#stats-section" class="block py-2 px-4 text-stone-700 hover:bg-stone-200/50 rounded">O Nama</a>
                     <a href="#cjenik" class="block py-2 px-4 text-stone-700 hover:bg-stone-200/50 rounded">Cjenik</a>
                     <a href="#galerija" class="block py-2 px-4 text-stone-700 hover:bg-stone-200/50 rounded">Galerija</a>
@@ -171,20 +168,17 @@
             </div>
         </section>
 
-        <!-- DODANO: Sekcija "Zašto Nas" s brojačem -->
-        <section id="stats-section" class="py-20 bg-brand-accent text-white">
+        <section id="stats-section" class="py-20 bg-white/50">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-12">Više od 30 Godina Povjerenja</h2>
+                <h2 class="text-3xl font-bold mb-12 text-stone-900">Više od 30 Godina Povjerenja</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                    <!-- Stat 1 -->
-                    <div class="bg-white/10 p-8 rounded-2xl">
+                    <div class="bg-white/80 p-8 rounded-2xl shadow-lg">
                         <span id="stat-experience" class="text-5xl font-bold text-brand-primary">0</span><span class="text-5xl font-bold text-brand-primary">+</span>
-                        <p class="mt-2 text-lg text-white/90">Godina Iskustva</p>
+                        <p class="mt-2 text-lg text-stone-700">Godina Iskustva</p>
                     </div>
-                    <!-- Stat 2 -->
-                    <div class="bg-white/10 p-8 rounded-2xl">
+                    <div class="bg-white/80 p-8 rounded-2xl shadow-lg">
                         <span id="stat-clients" class="text-5xl font-bold text-brand-primary">0</span><span class="text-5xl font-bold text-brand-primary">+</span>
-                        <p class="mt-2 text-lg text-white/90">Zadovoljnih Klijenata</p>
+                        <p class="mt-2 text-lg text-stone-700">Zadovoljnih Klijenata</p>
                     </div>
                 </div>
             </div>
@@ -311,7 +305,6 @@
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Galerija Naših Radova</h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <!-- ISPRAVLJENO: Dodan 'images/' prefix -->
                     <a href="images/25791130_1662153990514612_9020330882208578731_o.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/25791130_1662153990514612_9020330882208578731_o.jpg" alt="Frizura 1"></a>
                     <a href="images/26910041_1689132931150051_3069930148032715234_o.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/26910041_1689132931150051_3069930148032715234_o.jpg" alt="Frizura 2"></a>
                     <a href="images/33398225_1823132734416736_5750608583939063808_o.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/33398225_1823132734416736_5750608583939063808_o.jpg" alt="Frizura 3"></a>
@@ -324,22 +317,18 @@
             </div>
         </section>
 
-        <!-- DODANO: Sekcija Testimonials -->
         <section id="testimonials" class="py-20">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Što Kažu Naši Klijenti</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Testimonial 1 -->
                     <div class="bg-white/80 p-8 rounded-2xl shadow-lg">
                         <p class="text-stone-700 italic">"Nakon godina traženja, napokon sam pronašla salon kojem vjerujem. Svaki put izađem s osmijehom i savršenom bojom. Najbolja usluga u gradu!"</p>
                         <p class="mt-4 font-bold text-stone-900">- Ana K.</p>
                     </div>
-                    <!-- Testimonial 2 -->
                     <div class="bg-white/80 p-8 rounded-2xl shadow-lg">
                         <p class="text-stone-700 italic">"Profesionalnost i stručnost na najvišoj razini. Uvijek točno znaju što želim, čak i kad ja ne znam objasniti. Preporuka svima!"</p>
                         <p class="mt-4 font-bold text-stone-900">- Marko P.</p>
                     </div>
-                    <!-- Testimonial 3 -->
                     <div class="bg-white/80 p-8 rounded-2xl shadow-lg">
                         <p class="text-stone-700 italic">"Atmosfera u salonu je predivna i opuštajuća, a osoblje je nevjerojatno ljubazno. Moja topla preporuka za svečane frizure."</p>
                         <p class="mt-4 font-bold text-stone-900">- Jelena B.</p>
@@ -374,7 +363,7 @@
 
     <footer class="bg-white/50 py-6">
         <div class="container mx-auto px-6 text-center text-stone-600">
-            <p>&copy; <span id="currentYear"></span> Frizerski studio S. Sva prava pridržana.</p>
+            <p>© <span id="currentYear"></span> Frizerski studio S. Sva prava pridržana.</p>
         </div>
     </footer>
 
@@ -409,7 +398,6 @@
             }
         });
 
-        // DODANO: SKRIPTA ZA ANIMIRANI BROJAČ
         const animateCountUp = (el, target, duration = 2000) => {
             let start = 0;
             const finalTarget = parseInt(target, 10);
@@ -422,7 +410,7 @@
                 if (progress < 1) {
                     window.requestAnimationFrame(step);
                 } else {
-                    el.textContent = finalTarget; // Osiguraj točnu krajnju vrijednost
+                    el.textContent = finalTarget; 
                 }
             };
             window.requestAnimationFrame(step);
@@ -437,17 +425,15 @@
                 if (entry.isIntersecting) {
                     animateCountUp(statExperience, 30);
                     animateCountUp(statClients, 2000);
-                    observer.disconnect(); // Pokreni animaciju samo jednom
+                    observer.disconnect(); 
                 }
             });
-        }, { threshold: 0.5 }); // Pokreni kad je 50% sekcije vidljivo
+        }, { threshold: 0.5 }); 
 
         observer.observe(statsSection);
     </script>
 </body>
 </html>
-
-
 
 
 
