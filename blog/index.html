@@ -16,13 +16,17 @@
     <meta name="twitter:title" content="Blog Frizerskog studija S">
     <meta name="twitter:description" content="Savjeti stručnog tima Frizerskog studija S o njezi kose i trendovima.">
     <meta name="twitter:image" content="https://frizerskistudios.com/images/IMG-20250416-WA0004.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Montserrat', 'sans-serif']
+                        sans: ['Montserrat', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
                     },
                     colors: {
                         'brand-background': '#F4F1ED',
@@ -34,8 +38,40 @@
             }
         }
     </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #fff8f1 0%, #f5ede4 50%, #fdf6ee 100%);
+        }
+        .blog-hero {
+            background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.65), transparent 55%),
+                        radial-gradient(circle at 80% 0%, rgba(245,124,0,0.18), transparent 50%),
+                        #fff4eb;
+        }
+        .blog-hero__glow {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle, rgba(245,124,0,0.25) 0%, transparent 55%);
+            opacity: 0.7;
+        }
+        .blog-chip {
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            border: 1px solid rgba(68,64,60,0.2);
+            background-color: rgba(255,255,255,0.7);
+        }
+        .blog-card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 40px rgba(0,0,0,0.08);
+        }
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
 </head>
-<body class="bg-brand-background text-brand-text font-sans antialiased">
+<body class="text-brand-text font-sans antialiased relative">
     <header class="border-b border-black/10 bg-white/70 backdrop-blur-lg">
         <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="../index.html" class="flex items-center gap-3">
@@ -51,43 +87,110 @@
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-6 py-16 space-y-16">
-        <section class="text-center space-y-4">
-            <p class="text-xs uppercase tracking-[0.4em] text-brand-primary">Blog</p>
-            <h1 class="text-4xl md:text-5xl font-bold">Inspiracija i njega iz Frankopanske</h1>
-            <p class="text-lg text-stone-600 max-w-2xl mx-auto">Redovito dijelimo stručne savjete kako biste između termina mogli održati zdravu, sjajnu kosu i odabrati stil koji najbolje pristaje vašem lifestyleu u Zagrebu.</p>
+    <main class="relative max-w-6xl mx-auto px-6 py-16 space-y-16">
+        <section class="blog-hero relative overflow-hidden rounded-[48px] px-8 py-16 text-center md:text-left text-brand-text shadow-[0_40px_80px_rgba(0,0,0,0.08)]">
+            <div class="blog-hero__glow"></div>
+            <div class="relative z-10 space-y-6">
+                <p class="text-xs uppercase tracking-[0.5em] text-brand-primary">Blog Studio S</p>
+                <h1 class="font-display text-4xl md:text-5xl leading-tight">Inspiracija i <span class="bg-gradient-to-r from-brand-primary to-brand-accent text-transparent bg-clip-text">njega iz Frankopanske</span></h1>
+                <p class="text-lg text-stone-700 max-w-3xl">Redovito dijelimo stručne savjete kako biste između termina održali zdravu, sjajnu kosu i pronašli stil koji prati ritam Zagreba.</p>
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 text-xs uppercase tracking-[0.3em] text-stone-600">
+                    <span class="blog-chip">Njega kose</span>
+                    <span class="blog-chip">Trendovi</span>
+                    <span class="blog-chip">Vlasište</span>
+                    <span class="blog-chip">Balayage</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-2">
+                    <a href="../index.html#kontakt" class="bg-brand-primary text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-brand-accent transition">Bookiraj termin</a>
+                    <a href="tel:+385912254811" class="text-brand-primary font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all" aria-label="Nazovite Frizerski studio S">Nazovi salon<span aria-hidden="true">→</span></a>
+                </div>
+            </div>
         </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <article class="bg-white/90 rounded-2xl shadow-lg border border-stone-200 p-6 flex flex-col gap-4">
-                <p class="text-xs uppercase tracking-widest text-stone-500">15.11.2025.</p>
-                <h2 class="text-2xl font-semibold">Ljetna rutina za plavu kosu bez isušivanja</h2>
-                <p class="text-stone-600">Kombiniramo salonske tretmane i kućnu njegu kako bi boja ostala svježa unatoč UV zrakama i bazenu.</p>
-                <a href="ljetna-rutina-plava-kosa.html" class="text-brand-primary font-semibold inline-flex items-center gap-2">Pročitaj više<span aria-hidden="true">→</span></a>
+        <section class="grid gap-10">
+            <article class="bg-white/90 rounded-[36px] border border-white/60 shadow-2xl overflow-hidden md:grid md:grid-cols-2" itemscope itemtype="https://schema.org/BlogPosting">
+                <figure class="relative h-64 md:h-full">
+                    <img src="../images/26910041_1689132931150051_3069930148032715234_o.jpg" alt="Plava kosa njegovana ljetnim tretmanima" class="absolute inset-0 w-full h-full object-cover">
+                    <figcaption class="sr-only">Plava kosa u salonu</figcaption>
+                </figure>
+                <div class="p-8 flex flex-col gap-4">
+                    <div class="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-stone-500">
+                        <span>Njega kose</span>
+                        <span class="w-1 h-1 rounded-full bg-stone-400"></span>
+                        <time datetime="2025-11-15" itemprop="datePublished">15.11.2025.</time>
+                    </div>
+                    <h2 class="text-3xl font-semibold text-stone-900" itemprop="headline">Ljetna rutina za plavu kosu bez isušivanja</h2>
+                    <p class="text-stone-600" itemprop="description">Saznajte kako kombiniramo salonsku rekonstrukciju, UV zaštitu i kućnu rutinu kako bi balayage i svjetliji tonovi preživjeli zagrebačke vrućine.</p>
+                    <div class="mt-auto flex flex-col sm:flex-row gap-4">
+                        <a href="ljetna-rutina-plava-kosa.html" class="text-brand-primary font-semibold inline-flex items-center gap-2" itemprop="url">Čitaj članak<span aria-hidden="true">→</span></a>
+                        <a href="../index.html#kontakt" class="text-stone-500 font-semibold inline-flex items-center gap-2">Rezerviraj tretman<span aria-hidden="true">↗</span></a>
+                    </div>
+                    <meta itemprop="author" content="Frizerski studio S">
+                    <meta itemprop="image" content="https://frizerskistudios.com/images/26910041_1689132931150051_3069930148032715234_o.jpg">
+                    <meta itemprop="mainEntityOfPage" content="https://frizerskistudios.com/blog/ljetna-rutina-plava-kosa.html">
+                </div>
             </article>
-            <article class="bg-white/90 rounded-2xl shadow-lg border border-stone-200 p-6 flex flex-col gap-4">
-                <p class="text-xs uppercase tracking-widest text-stone-500">02.10.2025.</p>
-                <h2 class="text-2xl font-semibold">Kako obnoviti vlasište nakon bojanja</h2>
-                <p class="text-stone-600">Plan oporavka za osjetljivo vlasište uz pilinge, ampule i masaže koje radimo u salonu.</p>
-                <a href="obnova-vlasista-nakon-bojanja.html" class="text-brand-primary font-semibold inline-flex items-center gap-2">Pročitaj više<span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <article class="bg-white/90 border border-white/60 rounded-3xl p-6 flex flex-col gap-4 blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                <div class="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-stone-500">
+                    <span>Zdravo vlasište</span>
+                    <span class="w-1 h-1 rounded-full bg-stone-400"></span>
+                    <time datetime="2025-10-02" itemprop="datePublished">02.10.2025.</time>
+                </div>
+                <h3 class="text-2xl font-semibold text-stone-900" itemprop="headline">Kako obnoviti vlasište nakon bojanja</h3>
+                <p class="text-stone-600" itemprop="description">Trodnevni protokol s pilingom, ampulama i masažom kojim umirujemo crvenilo i vraćamo ravnotežu koži glave.</p>
+                <a href="obnova-vlasista-nakon-bojanja.html" class="text-brand-primary font-semibold inline-flex items-center gap-2" itemprop="url">Pročitaj više<span aria-hidden="true">→</span></a>
+                <div class="text-xs text-stone-400 uppercase tracking-[0.3em]">Čitanje · 4 min</div>
+                <meta itemprop="author" content="Frizerski studio S">
+                <meta itemprop="image" content="https://frizerskistudios.com/images/IMG-20250416-WA0005.jpg">
+                <meta itemprop="mainEntityOfPage" content="https://frizerskistudios.com/blog/obnova-vlasista-nakon-bojanja.html">
             </article>
-            <article class="bg-white/90 rounded-2xl shadow-lg border border-stone-200 p-6 flex flex-col gap-4">
-                <p class="text-xs uppercase tracking-widest text-stone-500">12.09.2025.</p>
-                <h2 class="text-2xl font-semibold">Top frizure za jesenske evente</h2>
-                <p class="text-stone-600">Trendovi za vjenčanja, promocije i poslovne zabave uz prijedloge stylinga i dodataka.</p>
-                <a href="jesenske-svecane-frizure.html" class="text-brand-primary font-semibold inline-flex items-center gap-2">Pročitaj više<span aria-hidden="true">→</span></a>
+
+            <article class="bg-white/90 border border-white/60 rounded-3xl p-6 flex flex-col gap-4 blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                <div class="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-stone-500">
+                    <span>Trendovi</span>
+                    <span class="w-1 h-1 rounded-full bg-stone-400"></span>
+                    <time datetime="2025-09-12" itemprop="datePublished">12.09.2025.</time>
+                </div>
+                <h3 class="text-2xl font-semibold text-stone-900" itemprop="headline">Top frizure za jesenske evente</h3>
+                <p class="text-stone-600" itemprop="description">Soft glam valovi, teksturirane punđe i sleek bobovi osmišljeni da izdrže svaku proslavu.</p>
+                <a href="jesenske-svecane-frizure.html" class="text-brand-primary font-semibold inline-flex items-center gap-2" itemprop="url">Pročitaj više<span aria-hidden="true">→</span></a>
+                <div class="text-xs text-stone-400 uppercase tracking-[0.3em]">Čitanje · 3 min</div>
+                <meta itemprop="author" content="Frizerski studio S">
+                <meta itemprop="image" content="https://frizerskistudios.com/images/IMG-20201223-WA0002.jpg">
+                <meta itemprop="mainEntityOfPage" content="https://frizerskistudios.com/blog/jesenske-svecane-frizure.html">
             </article>
-            <article class="bg-white/90 rounded-2xl shadow-lg border border-stone-200 p-6 flex flex-col gap-4">
-                <p class="text-xs uppercase tracking-widest text-stone-500">28.08.2025.</p>
-                <h2 class="text-2xl font-semibold">Balayage vodič za Zagreb</h2>
-                <p class="text-stone-600">Kako odabrati nijanse, održavati prijelaze i planirati termine u našem salonu.</p>
-                <a href="balayage-vodic-zagreb.html" class="text-brand-primary font-semibold inline-flex items-center gap-2">Pročitaj više<span aria-hidden="true">→</span></a>
+
+            <article class="bg-white/90 border border-white/60 rounded-3xl p-6 flex flex-col gap-4 blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                <div class="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-stone-500">
+                    <span>Balayage</span>
+                    <span class="w-1 h-1 rounded-full bg-stone-400"></span>
+                    <time datetime="2025-08-28" itemprop="datePublished">28.08.2025.</time>
+                </div>
+                <h3 class="text-2xl font-semibold text-stone-900" itemprop="headline">Balayage vodič za Zagreb</h3>
+                <p class="text-stone-600" itemprop="description">Kako pripremiti kosu, izabrati nijanse i održavati prijelaze između termina.</p>
+                <a href="balayage-vodic-zagreb.html" class="text-brand-primary font-semibold inline-flex items-center gap-2" itemprop="url">Pročitaj više<span aria-hidden="true">→</span></a>
+                <div class="text-xs text-stone-400 uppercase tracking-[0.3em]">Čitanje · 5 min</div>
+                <meta itemprop="author" content="Frizerski studio S">
+                <meta itemprop="image" content="https://frizerskistudios.com/images/image00002.jpeg">
+                <meta itemprop="mainEntityOfPage" content="https://frizerskistudios.com/blog/balayage-vodic-zagreb.html">
             </article>
-            <article class="bg-white/90 rounded-2xl shadow-lg border border-stone-200 p-6 flex flex-col gap-4 md:col-span-2">
-                <p class="text-xs uppercase tracking-widest text-stone-500">10.07.2025.</p>
-                <h2 class="text-2xl font-semibold">Odabir šišanja prema obliku lica</h2>
-                <p class="text-stone-600">Personalizirane preporuke frizura s primjerima iz salona i savjetima kako održati kroj kod kuće.</p>
-                <a href="oblik-lica-zenka-sisanja.html" class="text-brand-primary font-semibold inline-flex items-center gap-2">Pročitaj više<span aria-hidden="true">→</span></a>
+
+            <article class="bg-white/90 border border-white/60 rounded-3xl p-6 flex flex-col gap-4 blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                <div class="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-stone-500">
+                    <span>Vodič šišanja</span>
+                    <span class="w-1 h-1 rounded-full bg-stone-400"></span>
+                    <time datetime="2025-07-10" itemprop="datePublished">10.07.2025.</time>
+                </div>
+                <h3 class="text-2xl font-semibold text-stone-900" itemprop="headline">Odabir šišanja prema obliku lica</h3>
+                <p class="text-stone-600" itemprop="description">Personalizirane kombinacije slojeva, šiški i tekstura za ovalno, srcoliko ili četvrtasto lice.</p>
+                <a href="oblik-lica-zenka-sisanja.html" class="text-brand-primary font-semibold inline-flex items-center gap-2" itemprop="url">Pročitaj više<span aria-hidden="true">→</span></a>
+                <div class="text-xs text-stone-400 uppercase tracking-[0.3em]">Čitanje · 4 min</div>
+                <meta itemprop="author" content="Frizerski studio S">
+                <meta itemprop="image" content="https://frizerskistudios.com/images/image00005.jpeg">
+                <meta itemprop="mainEntityOfPage" content="https://frizerskistudios.com/blog/oblik-lica-zenka-sisanja.html">
             </article>
         </section>
     </main>
