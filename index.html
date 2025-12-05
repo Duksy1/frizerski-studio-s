@@ -550,14 +550,11 @@
         </section>
     </main>
 
-    <footer class="bg-white/50 py-6">
-        <div class="container mx-auto px-6 text-center text-stone-600">
-            <p>© <span id="currentYear"></span> Frizerski studio S. Sva prava pridržana.</p>
-        </div>
-    </footer>
-
     <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        const yearEl = document.getElementById('currentYear');
+        if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
+        }
 
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');

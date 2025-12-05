@@ -195,14 +195,11 @@
         </section>
     </main>
 
-    <footer class="bg-white/50 py-6">
-        <div class="text-center text-stone-600 text-sm">
-            <p>© <span id="year"></span> Frizerski studio S | Blog</p>
-        </div>
-    </footer>
-
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+        const blogYear = document.getElementById('year');
+        if (blogYear) {
+            blogYear.textContent = new Date().getFullYear();
+        }
     </script>
 </body>
 </html>
