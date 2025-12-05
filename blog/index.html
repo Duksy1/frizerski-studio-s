@@ -74,18 +74,29 @@
     </style>
 </head>
 <body class="text-brand-text font-sans antialiased relative">
-    <header class="border-b border-black/10 bg-white/70 backdrop-blur-lg">
+    <header class="border-b border-black/10 bg-white/70 backdrop-blur-lg sticky top-0 z-40">
         <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="../index.html" class="flex items-center gap-3">
                 <img src="../images/naljepnica.png" alt="Studio S logo" class="h-10">
                 <span class="font-semibold tracking-wide">Frizerski studio S</span>
             </a>
-            <nav class="flex items-center gap-6 text-sm md:text-base">
+            <button id="blog-mobile-btn" class="md:hidden p-2 rounded-full border border-stone-200 text-stone-700" aria-label="Otvori navigaciju bloga" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <nav class="hidden md:flex items-center gap-6 text-sm md:text-base">
                 <a href="../index.html#usluge" class="hover:text-brand-primary">Usluge</a>
                 <a href="../index.html#cjenik" class="hover:text-brand-primary">Cjenik</a>
                 <a href="../index.html#kontakt" class="hover:text-brand-primary">Kontakt</a>
                 <a href="tel:+385912254811" class="bg-brand-primary text-white font-semibold py-2 px-4 rounded-lg hover:bg-brand-accent transition">Rezerviraj</a>
             </nav>
+        </div>
+        <div id="blog-mobile-menu" class="md:hidden max-w-5xl mx-auto px-6 pb-4 space-y-2 hidden">
+            <a href="../index.html#usluge" class="block rounded-2xl border border-stone-200 bg-white/90 px-4 py-3 text-sm font-medium text-stone-700">Usluge</a>
+            <a href="../index.html#cjenik" class="block rounded-2xl border border-stone-200 bg-white/90 px-4 py-3 text-sm font-medium text-stone-700">Cjenik</a>
+            <a href="../index.html#kontakt" class="block rounded-2xl border border-stone-200 bg-white/90 px-4 py-3 text-sm font-medium text-stone-700">Kontakt</a>
+            <a href="tel:+385912254811" class="block rounded-2xl bg-brand-primary text-center text-white font-semibold px-4 py-3">Rezerviraj termin</a>
         </div>
     </header>
 
@@ -201,6 +212,16 @@
         const blogYear = document.getElementById('year');
         if (blogYear) {
             blogYear.textContent = new Date().getFullYear();
+        }
+
+        const blogMobileBtn = document.getElementById('blog-mobile-btn');
+        const blogMobileMenu = document.getElementById('blog-mobile-menu');
+        if (blogMobileBtn && blogMobileMenu) {
+            blogMobileBtn.addEventListener('click', () => {
+                blogMobileMenu.classList.toggle('hidden');
+                const expanded = !blogMobileMenu.classList.contains('hidden');
+                blogMobileBtn.setAttribute('aria-expanded', expanded.toString());
+            });
         }
     </script>
 </body>
