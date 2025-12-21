@@ -3,671 +3,666 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frizerski studio S - Frankopanska 9, Zagreb</title>
-    <meta name="description" content="Frizerski studio S nudi profesionalne frizerske usluge za žene i muškarce u srcu Zagreba, na adresi Frankopanska 9. Rezervirajte svoj termin!">
+    <title>Frizerski studio S - Vrhunska njega kose, Frankopanska 9 Zagreb</title>
+    <meta name="description" content="Frizerski studio S u centru Zagreba nudi profesionalno šišanje, bojanje (balayage, pramenovi) i njegu kose. Rezervirajte termin na Frankopanskoj 9!">
+    <meta name="keywords" content="frizerski salon zagreb, frizer centar, bojanje kose, pramenovi, šišanje zagreb, studio s">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://frizerskistudios.com/">
-    <meta property="og:type" content="website">
+    
+    <meta property="og:type" content="business.business">
     <meta property="og:title" content="Frizerski studio S - Frankopanska 9, Zagreb">
-    <meta property="og:description" content="Frizerski studio S nudi profesionalne frizerske usluge za žene i muškarce u srcu Zagreba, na adresi Frankopanska 9. Rezervirajte svoj termin!">
-    <meta property="og:url" content="https://frizerskistudios.com/">
+    <meta property="og:description" content="Vrhunska njega kose, moderno šišanje i bojanje u srcu Zagreba.">
     <meta property="og:image" content="https://frizerskistudios.com/images/IMG-20250416-WA0004.jpg">
-    <meta property="og:locale" content="hr_HR">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Frizerski studio S - Frankopanska 9, Zagreb">
-    <meta name="twitter:description" content="Frizerski studio S nudi profesionalne frizerske usluge za žene i muškarce u srcu Zagreba, na adresi Frankopanska 9. Rezervirajte svoj termin!">
-    <meta name="twitter:image" content="https://frizerskistudios.com/images/IMG-20250416-WA0004.jpg">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta property="og:url" content="https://frizerskistudios.com/">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/naljepnica.png">
-    <link rel="apple-touch-icon" href="images/naljepnica.png">
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        .mobile-menu {
-            display: none;
-            background-color: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 1rem;
-            padding: 1rem;
-            margin-top: 1rem;
-        }
-        #pricelist-content {
-            transition: all 0.3s ease-in-out;
-            overflow: hidden;
-        }
-        .pricelist-hidden {
-            max-height: 0;
-            padding-top: 0;
-            padding-bottom: 0;
-            opacity: 0;
-            margin-top: -1rem;
-        }
-        
-        /* Stilovi za Flip Card efekt */
-        .flip-card {
-            perspective: 1000px;
-        }
-        .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.7s;
-            transform-style: preserve-3d;
-        }
-        .flip-card:hover .flip-card-inner {
-            transform: rotateY(180deg);
-        }
-        .flip-card-front, .flip-card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .flip-card-back {
-            transform: rotateY(180deg);
-        }
-
-        /* Stil za pozadinsku sliku u hero sekciji */
-        #home {
-            background-image: url('images/frizerskistudios pozadina.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; 
-            color: white; 
-            position: relative;
-        }
-
-        /* Overlay za bolju čitljivost teksta */
-        #home::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4); 
-            z-index: 1;
-        }
-        #home .content-wrapper { /* AŽURIRANO: Koristi wrapper za z-index */
-            position: relative;
-            z-index: 2; 
-        }
-        /* Sjena na tekst za bolju čitljivost */
-        #home h1, #home p {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
-    </style>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
+                        sans: ['Montserrat', 'sans-serif'], // Sada je Montserrat glavni font za sve
                     },
                     colors: {
-                        'brand-background': '#F4F1ED',
-                        'brand-text': '#44403c',
-                        'brand-primary': '#F57C00',
-                        'brand-accent': '#D87000'
+                        'brand-bg': '#FAFAF9', // Topla bijela/siva
+                        'brand-dark': '#1C1917', // Mekana crna
+                        'brand-copper': '#C27848', // Moderna bakrena boja
+                        'brand-gold': '#D4A373', // Zlatni detalji
+                        'brand-soft': '#E7E5E4'
+                    },
+                    letterSpacing: {
+                        tighter: '-0.05em',
+                        tight: '-0.025em',
+                        normal: '0',
+                        wide: '0.025em',
+                        wider: '0.05em',
+                        widest: '0.1em',
                     }
                 }
             }
         }
     </script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "HairSalon",
-            "name": "Frizerski studio S",
-            "image": "https://frizerskistudios.com/images/IMG-20250416-WA0004.jpg",
-            "@id": "https://frizerskistudios.com/#business",
-            "url": "https://frizerskistudios.com/",
-            "telephone": "+385912254811",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Frankopanska 9",
-                "addressLocality": "Zagreb",
-                "postalCode": "10000",
-                "addressCountry": "HR"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 45.809315,
-                "longitude": 15.972154
-            },
-            "openingHoursSpecification": [
-                {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": [
-                        "Monday",
-                        "Tuesday",
-                        "Wednesday",
-                        "Thursday",
-                        "Friday"
-                    ],
-                    "opens": "08:00",
-                    "closes": "18:00"
-                },
-                {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": "Saturday",
-                    "opens": "08:00",
-                    "closes": "15:00"
-                }
-            ],
-            "sameAs": [
-                "https://www.facebook.com/profile.php?id=100063476412222",
-                "https://www.instagram.com/explore/locations/1026787795/frizerski-studio-s/"
-            ]
-        }
-    </script>
-</head>
-<body class="bg-brand-background text-brand-text font-sans antialiased">
 
-    <!-- Header - AŽURIRANO: Uklonjen p-4 -->
-    <header class="fixed w-full z-50 top-0 left-0">
-        <!-- AŽURIRANO: Dodan pt-4 za razmak iznad sadržaja headera -->
-        <div id="header-bg" class="w-[90%] md:w-full max-w-5xl mx-auto bg-white/60 backdrop-blur-lg border border-black/10 shadow-lg rounded-2xl transition-all duration-300 mt-4"> 
-            <div class="container mx-auto px-6 py-3">
-                <div class="flex items-center justify-between relative">
-                    <div class="md:hidden">
-                        <button id="mobile-menu-button" class="text-stone-900 focus:outline-none">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                        </button>
-                    </div>
-                    <a href="#home" class="absolute left-1/2 -translate-x-1/2 md:relative md:left-auto md:translate-x-0">
-                        <img src="images/naljepnica.png" alt="Studio S Logo" class="h-10 w-auto">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Frizerski studio S",
+        "image": "https://frizerskistudios.com/images/IMG-20250416-WA0004.jpg",
+        "@id": "https://frizerskistudios.com/#business",
+        "url": "https://frizerskistudios.com/",
+        "telephone": "+385912254811",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Frankopanska 9",
+            "addressLocality": "Zagreb",
+            "postalCode": "10000",
+            "addressCountry": "HR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.809315,
+            "longitude": 15.972154
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "08:00",
+                "closes": "15:00"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Stilovi za cjenik tablicu */
+        .price-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e7e5e4;
+            align-items: center;
+        }
+        
+        .price-row:last-child {
+            border-bottom: none;
+        }
+
+        .price-header {
+            font-weight: 700; /* Bold header */
+            color: #C27848;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #C27848;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Mobile adjustments for price table */
+        @media (max-width: 640px) {
+            .price-row {
+                grid-template-columns: 1fr;
+                gap: 0.25rem;
+                padding: 1rem 0;
+            }
+            .price-header { display: none; }
+            .mobile-price-label {
+                display: inline-block;
+                width: 80px;
+                font-size: 0.75rem;
+                color: #78716c;
+                font-weight: 600;
+            }
+            .price-col {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px dotted #e7e5e4;
+                padding: 2px 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-dark font-sans antialiased selection:bg-brand-copper selection:text-white">
+
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 glass-nav border-b border-stone-200/50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <a href="#home" class="flex items-center gap-3 group">
+                    <img src="images/naljepnica.png" alt="Frizerski Studio S Logo" class="h-12 w-auto transition-transform duration-300 group-hover:scale-105">
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide">
+                    <a href="#usluge" class="hover:text-brand-copper transition-colors">USLUGE</a>
+                    <a href="#cjenik" class="hover:text-brand-copper transition-colors">CJENIK</a>
+                    <a href="#galerija" class="hover:text-brand-copper transition-colors">GALERIJA</a>
+                    <a href="#blog" class="hover:text-brand-copper transition-colors">BLOG</a>
+                    <a href="#kontakt" class="hover:text-brand-copper transition-colors">KONTAKT</a>
+                    <a href="tel:+385912254811" class="bg-brand-dark text-white px-6 py-2.5 rounded-full hover:bg-brand-copper transition-all transform hover:scale-105 shadow-lg font-bold">
+                        Rezerviraj
                     </a>
-                    <nav class="hidden md:flex items-center space-x-8">
-                        <a href="#usluge" class="text-stone-700 hover:text-stone-900 transition">Usluge</a>
-                        <a href="#stats-section" class="text-stone-700 hover:text-stone-900 transition">O Nama</a>
-                        <a href="#cjenik" class="text-stone-700 hover:text-stone-900 transition">Cjenik</a>
-                        <a href="#galerija" class="text-stone-700 hover:text-stone-900 transition">Galerija</a>
-                        <a href="blog/index.html" class="text-stone-700 hover:text-stone-900 transition">Blog</a>
-                        <a href="#kontakt" class="text-stone-700 hover:text-stone-900 transition">Kontakt</a>
-                        <a href="tel:+385912254811" class="bg-brand-primary text-white font-semibold py-2 px-5 rounded-lg transition-transform duration-300 hover:bg-brand-accent hover:scale-105">Rezerviraj</a>
-                    </nav>
-                    <div class="md:hidden">
-                         <a href="tel:+385912254811" class="bg-brand-primary text-white font-semibold py-2 px-4 rounded-lg text-xs">Rezerviraj</a>
-                    </div>
                 </div>
-                <div id="mobile-menu" class="mobile-menu md:hidden">
-                    <a href="#usluge" class="block py-2 px-4 text-stone-700 hover:bg-stone-200/50 rounded">Usluge</a>
-                    <a href="#stats-section" class="block py-2 px-4 text-stone-700 hover:bg-stone-200/50 rounded">O Nama</a>
-                    <a href="#cjenik" class="block py-2 px-4 text-stone-700 hover:bg-stone-200/50 rounded">Cjenik</a>
-                    <a href="#galerija" class="block py-2 px-4 text-stone-700 hover:bg-stone-200/50 rounded">Galerija</a>
-                    <a href="blog/index.html" class="block py-2 px-4 text-stone-700 hover:bg-stone-200/50 rounded">Blog</a>
-                    <a href="#kontakt" class="block py-2 px-4 text-stone-700 hover:bg-stone-200/50 rounded">Kontakt</a>
-                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-brand-dark focus:outline-none p-2" aria-label="Izbornik">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-t border-stone-100 shadow-xl py-6 px-6 flex-col space-y-4 font-medium">
+                <a href="#usluge" class="block text-lg border-b border-stone-100 pb-2">Usluge</a>
+                <a href="#cjenik" class="block text-lg border-b border-stone-100 pb-2">Cjenik</a>
+                <a href="#galerija" class="block text-lg border-b border-stone-100 pb-2">Galerija</a>
+                <a href="#blog" class="block text-lg border-b border-stone-100 pb-2">Blog</a>
+                <a href="#kontakt" class="block text-lg border-b border-stone-100 pb-2">Kontakt</a>
+                <a href="tel:+385912254811" class="block text-center bg-brand-copper text-white py-3 rounded-lg mt-4 font-bold shadow-md">Nazovite nas</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="images/frizerskistudios pozadina.jpg" alt="Interijer Frizerskog studija S u Zagrebu" class="w-full h-full object-cover object-center scale-105 animate-[pulse_10s_ease-in-out_infinite_alternate]">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/30"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto mt-16">
+            <p class="text-brand-gold uppercase tracking-[0.3em] text-sm md:text-base font-bold mb-4 animate-[fadeInDown_1s_ease-out]">Frankopanska 9, Zagreb</p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 leading-tight animate-[fadeInUp_1s_ease-out_0.3s_both] tracking-tight">
+                Vaša kosa,<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-stone-300">naša strast.</span>
+            </h1>
+            <p class="text-stone-200 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-medium animate-[fadeInUp_1s_ease-out_0.6s_both]">
+                Doživite vrhunsku njegu i stiliziranje u srcu Zagreba. Više od 30 godina tradicije i povjerenja.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center animate-[fadeInUp_1s_ease-out_0.9s_both]">
+                <a href="tel:+385912254811" class="bg-brand-copper text-white text-lg px-8 py-4 rounded-full font-bold hover:bg-white hover:text-brand-copper transition-all duration-300 shadow-xl border border-transparent hover:border-brand-copper">
+                    Rezervirajte Termin
+                </a>
+                <a href="#cjenik" class="bg-transparent border-2 border-white text-white text-lg px-8 py-4 rounded-full font-bold hover:bg-white hover:text-brand-dark transition-all duration-300">
+                    Pogledajte Cjenik
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- AŽURIRANO: pt-32 prebačen na sekciju home umjesto na main -->
-    <main>
-        <!-- AŽURIRANO: Uklonjen container mx-auto px-6, dodan pt-32, dodan content-wrapper -->
-        <section id="home" class="text-center py-32 md:py-48 pt-48"> 
-            <div class="content-wrapper container mx-auto px-6">
-                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">Loš dan s kosom<br>ne mora biti svakodnevnica</h1>
-                <p class="mt-4 text-lg text-white max-w-2xl mx-auto">U Frizerskom studiju S vraćamo vašoj kosi oblik, sjaj i samopouzdanje.</p>
-                <a href="tel:+385912254811" class="mt-8 inline-block bg-brand-primary text-white font-bold text-lg py-4 px-10 rounded-xl transition-transform duration-300 hover:bg-brand-accent hover:scale-105">Nazovite za Termin</a>
+    <section class="py-16 bg-white relative z-20 -mt-8 mx-4 md:mx-auto max-w-6xl rounded-xl shadow-2xl border border-stone-100">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-stone-100">
+            <div class="p-4">
+                <span class="block text-5xl font-extrabold text-brand-dark mb-2" id="stat-years">0</span>
+                <span class="text-sm uppercase tracking-widest text-stone-500 font-bold">Godina Tradicije</span>
             </div>
-        </section>
+            <div class="p-4">
+                <span class="block text-5xl font-extrabold text-brand-copper mb-2" id="stat-clients">0</span>
+                <span class="text-sm uppercase tracking-widest text-stone-500 font-bold">Zadovoljnih Klijenata</span>
+            </div>
+            <div class="p-4">
+                <div class="flex justify-center items-center gap-2 mb-2">
+                    <span class="text-5xl font-extrabold text-brand-dark">4.8</span>
+                    <svg class="w-8 h-8 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                </div>
+                <span class="text-sm uppercase tracking-widest text-stone-500 font-bold">Google Ocjena</span>
+            </div>
+        </div>
+    </section>
 
-        <section id="usluge" class="py-20 bg-white/50">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Naše Usluge</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="usluge" class="py-24 bg-brand-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">Naše Usluge</h2>
+                <div class="w-24 h-1.5 bg-brand-copper mx-auto mb-6 rounded-full"></div>
+                <p class="text-stone-600 max-w-2xl mx-auto font-medium">Kombiniramo klasične tehnike s najnovijim trendovima kako bismo istaknuli vašu osobnost.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-10 rounded-2xl shadow-sm border border-stone-100 text-center group">
+                    <div class="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-copper group-hover:bg-brand-copper group-hover:text-white transition-colors">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm8.486-8.486a5 5 0 10-7.072 7.072 5 5 0 007.072-7.072z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Moderno Šišanje</h3>
+                    <p class="text-stone-600 mb-6 font-medium text-sm">Precizno šišanje prilagođeno obliku vašeg lica i teksturi kose. Od klasičnih bob frizura do modernih slojevitih rezova.</p>
+                </div>
+
+                <div class="service-card bg-white p-10 rounded-2xl shadow-sm border border-stone-100 text-center group">
+                    <div class="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-copper group-hover:bg-brand-copper group-hover:text-white transition-colors">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Kolorizacija</h3>
+                    <p class="text-stone-600 mb-6 font-medium text-sm">Balayage, ombre, pramenovi ili potpuna promjena boje. Koristimo vrhunske boje koje štite strukturu vlasi.</p>
+                </div>
+
+                <div class="service-card bg-white p-10 rounded-2xl shadow-sm border border-stone-100 text-center group">
+                    <div class="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-copper group-hover:bg-brand-copper group-hover:text-white transition-colors">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Svečane Frizure</h3>
+                    <p class="text-stone-600 mb-6 font-medium text-sm">Bilo da je riječ o vjenčanju, maturi ili drugoj posebnoj prigodi, kreiramo frizuru koja će vas istaknuti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cjenik" class="py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="text-brand-copper font-extrabold tracking-widest uppercase text-xs">Transparentne Cijene</span>
+                <h2 class="text-4xl font-extrabold mt-2 tracking-tight">Cjenik Usluga</h2>
+            </div>
+
+            <div class="bg-brand-bg p-6 md:p-12 rounded-3xl shadow-lg border border-stone-100 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-copper/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+
+                <div class="mb-12">
+                    <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center tracking-tight">
+                        <span class="w-2 h-8 bg-brand-copper mr-3 rounded-full"></span>
+                        Ženske usluge - Šišanje i Frizura
+                    </h3>
                     
-                    <div class="flip-card h-56">
-                        <div class="flip-card-inner shadow-lg rounded-2xl">
-                            <div class="flip-card-front bg-white/80 rounded-2xl p-6">
-                                <h3 class="text-2xl font-bold text-stone-900">Moderno Šišanje</h3>
-                            </div>
-                            <div class="flip-card-back bg-brand-accent text-white rounded-2xl p-6 text-center">
-                                <p>Pratimo najnovije trendove kako bismo vam pružili frizuru koja odgovara vašem stilu i obliku lica.</p>
-                            </div>
-                        </div>
+                    <div class="price-row price-header">
+                        <div>Usluga</div>
+                        <div class="text-right">Kratka</div>
+                        <div class="text-right">Srednja</div>
+                        <div class="text-right">Duga</div>
                     </div>
 
-                    <div class="flip-card h-56">
-                        <div class="flip-card-inner shadow-lg rounded-2xl">
-                            <div class="flip-card-front bg-white/80 rounded-2xl p-6">
-                                <h3 class="text-2xl font-bold text-stone-900">Bojanje i Pramenovi</h3>
-                            </div>
-                            <div class="flip-card-back bg-brand-accent text-white rounded-2xl p-6 text-center">
-                                <p>Koristimo visokokvalitetne boje za savršene rezultate, od klasičnih nijansi do balayage tehnike.</p>
-                            </div>
-                        </div>
+                    <div class="price-row">
+                        <div class="font-semibold text-brand-dark">Pranje kose i frizura</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Kratka:</span> 12.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Srednja:</span> 14.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Duga:</span> 16.00 €</div>
                     </div>
-
-                    <div class="flip-card h-56">
-                        <div class="flip-card-inner shadow-lg rounded-2xl">
-                            <div class="flip-card-front bg-white/80 rounded-2xl p-6">
-                                <h3 class="text-2xl font-bold text-stone-900">Svečane Frizure</h3>
-                            </div>
-                            <div class="flip-card-back bg-brand-accent text-white rounded-2xl p-6 text-center">
-                                <p>Bilo da se radi o vjenčanju, maturi ili drugoj posebnoj prigodi, kreiramo frizuru koja će vas istaknuti.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="stats-section" class="py-20 bg-white/50">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-12 text-stone-900">Više od 30 Godina Povjerenja</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                    <div class="bg-white/80 p-8 rounded-2xl shadow-lg">
-                        <span id="stat-experience" class="text-5xl font-bold text-brand-primary">0</span><span class="text-5xl font-bold text-brand-primary">+</span>
-                        <p class="mt-2 text-lg text-stone-700">Godina Iskustva</p>
-                    </div>
-                    <div class="bg-white/80 p-8 rounded-2xl shadow-lg">
-                        <span id="stat-clients" class="text-5xl font-bold text-brand-primary">0</span><span class="text-5xl font-bold text-brand-primary">+</span>
-                        <p class="mt-2 text-lg text-stone-700">Zadovoljnih Klijenata</p>
+                    <div class="price-row">
+                        <div class="font-semibold text-brand-dark">Šišanje i frizura</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Kratka:</span> 25.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Srednja:</span> 28.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Duga:</span> 30.00 €</div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="cjenik" class="py-20">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col justify-center items-center mb-8 md:mb-12 gap-4">
-                    <h2 class="text-3xl font-bold text-stone-900">Cjenik</h2>
-                    <button id="toggle-pricelist-btn" class="border border-stone-400 text-stone-700 font-semibold py-2 px-4 rounded-lg text-sm transition hover:bg-stone-200/50">Sakrij Cjenik</button>
+                <div class="mb-12">
+                    <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center tracking-tight">
+                        <span class="w-2 h-8 bg-brand-copper mr-3 rounded-full"></span>
+                        Usluge Bojanja
+                    </h3>
+
+                    <div class="price-row price-header">
+                        <div>Usluga</div>
+                        <div class="text-right">Kratka</div>
+                        <div class="text-right">Srednja</div>
+                        <div class="text-right">Duga</div>
+                    </div>
+
+                    <div class="price-row">
+                        <div class="font-semibold text-brand-dark">Bojanje i frizura</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Kratka:</span> 36.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Srednja:</span> 42.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Duga:</span> 48.00 €</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="font-semibold text-brand-dark">Bojanje, šišanje i frizura</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Kratka:</span> 45.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Srednja:</span> 55.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Duga:</span> 65.00 €</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="font-semibold text-brand-dark">Pramenovi i frizura</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Kratka:</span> 45.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Srednja:</span> 55.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Duga:</span> 60.00 €</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="font-semibold text-brand-dark">Pramenovi, šišanje i frizura</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Kratka:</span> 55.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Srednja:</span> 65.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Duga:</span> 75.00 €</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="font-semibold text-brand-dark">Ombre, šišanje i frizura</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Kratka:</span> 60.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Srednja:</span> 65.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Duga:</span> 70.00 €</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="font-semibold text-brand-dark">Preljev, šišanje i frizura</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Kratka:</span> 36.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Srednja:</span> 42.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Duga:</span> 48.00 €</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="font-semibold text-brand-dark">Minival, šišanje i frizura</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Kratka:</span> 40.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Srednja:</span> 47.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Duga:</span> 54.00 €</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="font-semibold text-brand-dark">Svečana frizura</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Kratka:</span> 40.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Srednja:</span> 47.00 €</div>
+                        <div class="price-col text-right"><span class="mobile-price-label">Duga:</span> 55.00 €</div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center tracking-tight">
+                            <span class="w-2 h-8 bg-brand-gold mr-3 rounded-full"></span>
+                            Specijalne usluge
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-center border-b border-stone-200 pb-2">
+                                <span class="text-stone-700 font-medium">Frizura valovi</span>
+                                <span class="font-bold text-brand-copper">25.00 €</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-stone-200 pb-2">
+                                <span class="text-stone-700 font-medium">Riblja kost pletenica</span>
+                                <span class="font-bold text-brand-copper">20.00 €</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-stone-200 pb-2">
+                                <span class="text-stone-700 font-medium">Skidanje pigmenta/prepigmentacija</span>
+                                <span class="font-bold text-brand-copper">22.00 €</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-stone-200 pb-2">
+                                <span class="text-stone-700 font-medium">Patiniranje pramenova</span>
+                                <span class="font-bold text-brand-copper">15.00 €</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-stone-200 pb-2">
+                                <span class="text-stone-700 font-medium">Maska/masaža/ampula</span>
+                                <span class="font-bold text-brand-copper">5.00 €</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="text-stone-700 font-medium">Skraćivanje šiški</span>
+                                <span class="font-bold text-brand-copper">8.00 €</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center tracking-tight">
+                            <span class="w-2 h-8 bg-brand-dark mr-3 rounded-full"></span>
+                            Muške i dječje usluge
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-center border-b border-stone-200 pb-2">
+                                <span class="text-stone-700 font-medium">Muško šišanje</span>
+                                <span class="font-bold text-brand-copper">12.00 €</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-stone-200 pb-2">
+                                <span class="text-stone-700 font-medium">Muško šišanje i pranje</span>
+                                <span class="font-bold text-brand-copper">15.00 €</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-stone-200 pb-2">
+                                <span class="text-stone-700 font-medium">Korekcija brade i brkova</span>
+                                <span class="font-bold text-brand-copper">8.00 €</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-stone-200 pb-2">
+                                <span class="text-stone-700 font-medium">Dječje šišanje (Vrtić)</span>
+                                <span class="font-bold text-brand-copper">10.00 €</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="text-stone-700 font-medium">Dječje šišanje (6-12 god.)</span>
+                                <span class="font-bold text-brand-copper">14.00 €</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-stone-200 text-center text-sm text-stone-500 italic font-medium">
+                    <p>Sve cijene su izražene u Eurima. Za posebne zahtjeve i konzultacije, slobodno nas kontaktirajte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galerija" class="py-24 bg-brand-dark text-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-extrabold tracking-tight">Galerija Radova</h2>
+                    <p class="text-stone-400 mt-2 font-medium">Inspiracija iz našeg salona</p>
+                </div>
+                <a href="https://www.instagram.com/explore/locations/1026787795/frizerskistudios/" target="_blank" rel="noopener noreferrer" class="hidden md:inline-block text-brand-gold border-b border-brand-gold pb-1 hover:text-white hover:border-white transition mt-4 md:mt-0 font-semibold">Pratite nas na Instagramu</a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="relative group overflow-hidden rounded-xl aspect-[3/4]">
+                    <img src="images/25791130_1662153990514612_9020330882208578731_o.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Primjer bojanja kose - Frizerski Studio S">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl aspect-[3/4] md:translate-y-8">
+                    <img src="images/26910041_1689132931150051_3069930148032715234_o.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Plava kosa i pramenovi">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl aspect-[3/4]">
+                    <img src="images/IMG-20250416-WA0005.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Frizura valovi">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl aspect-[3/4] md:translate-y-8">
+                    <img src="images/image00002.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Svečana frizura za vjenčanje">
+                </div>
+                <div class="hidden md:block relative group overflow-hidden rounded-xl aspect-[3/4]">
+                    <img src="images/33398225_1823132734416736_5750608583939063808_o.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Moderna ženska frizura">
+                </div>
+                <div class="hidden md:block relative group overflow-hidden rounded-xl aspect-[3/4] md:translate-y-8">
+                    <img src="images/IMG-20201223-WA0002.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Elegantna frizura">
+                </div>
+                <div class="hidden md:block relative group overflow-hidden rounded-xl aspect-[3/4]">
+                     <img src="images/IMG-20250416-WA0004.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Njega kose">
+                </div>
+                 <div class="hidden md:block relative group overflow-hidden rounded-xl aspect-[3/4] md:translate-y-8">
+                     <img src="images/image00005.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Kreativno bojanje kose">
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center md:hidden">
+                 <a href="https://www.instagram.com/explore/locations/1026787795/frizerskistudios/" class="text-brand-gold border-b border-brand-gold pb-1 font-semibold">Pogledajte više na Instagramu</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-bg">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-16">
+                <svg class="w-12 h-12 text-brand-copper/30 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.01691 21L5.01691 18C5.01691 16.8954 5.91234 16 7.01691 16H10.0169C10.5692 16 11.0169 15.5523 11.0169 15V9C11.0169 8.44772 10.5692 8 10.0169 8H6.01691C5.46462 8 5.01691 8.44772 5.01691 9V11C5.01691 11.5523 4.56919 12 4.01691 12H3.01691V5H13.0169V15C13.0169 18.3137 10.3306 21 7.01691 21H5.01691Z"></path></svg>
+                <h2 class="text-3xl font-extrabold text-brand-dark tracking-tight">Riječi Naših Klijenata</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition">
+                    <p class="text-stone-600 italic mb-6 text-lg font-medium">"Nakon godina traženja, napokon sam pronašla salon kojem vjerujem. Svaki put izađem s osmijehom i savršenom bojom. Ambijent je predivan, a osoblje stručno."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-copper font-bold">A</div>
+                        <div>
+                            <p class="font-bold">Ana K.</p>
+                            <div class="flex text-brand-gold text-xs">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition">
+                    <p class="text-stone-600 italic mb-6 text-lg font-medium">"Profesionalnost i stručnost na najvišoj razini. Uvijek točno znaju što želim, čak i kad ja ne znam objasniti. Topla preporuka svima!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-copper font-bold">M</div>
+                        <div>
+                            <p class="font-bold">Marko P.</p>
+                            <div class="flex text-brand-gold text-xs">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <h2 class="text-4xl font-extrabold text-brand-dark tracking-tight">Naš Blog</h2>
+                <a href="blog/index.html" class="text-brand-copper hover:text-brand-dark transition font-bold">Svi članci →</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="blog/ljetna-rutina-plava-kosa.html" class="group block cursor-pointer">
+                    <article>
+                        <div class="overflow-hidden rounded-xl mb-4 h-64">
+                            <img src="images/26910041_1689132931150051_3069930148032715234_o.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Blog: Njega plave kose">
+                        </div>
+                        <span class="text-xs font-bold text-brand-copper uppercase tracking-wider">Njega kose</span>
+                        <h3 class="text-xl font-bold mt-2 group-hover:text-brand-copper transition">Ljetna rutina za plavu kosu</h3>
+                        <p class="text-stone-500 mt-2 text-sm line-clamp-2 font-medium">Kako sačuvati hladne tonove i spriječiti isušivanje tijekom ljetnih mjeseci...</p>
+                    </article>
+                </a>
+
+                <a href="blog/obnova-vlasista-nakon-bojanja.html" class="group block cursor-pointer">
+                    <article>
+                        <div class="overflow-hidden rounded-xl mb-4 h-64">
+                            <img src="images/IMG-20250416-WA0005.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Blog: Obnova vlasišta">
+                        </div>
+                        <span class="text-xs font-bold text-brand-copper uppercase tracking-wider">Vlasište</span>
+                        <h3 class="text-xl font-bold mt-2 group-hover:text-brand-copper transition">Detoksikacija vlasišta</h3>
+                        <p class="text-stone-500 mt-2 text-sm line-clamp-2 font-medium">Zašto je piling vlasišta bitan za rast zdrave kose i kako ga pravilno izvoditi...</p>
+                    </article>
+                </a>
+
+                <a href="blog/jesenske-svecane-frizure.html" class="group block cursor-pointer">
+                    <article>
+                        <div class="overflow-hidden rounded-xl mb-4 h-64">
+                            <img src="images/IMG-20201223-WA0002.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Blog: Jesenske frizure">
+                        </div>
+                        <span class="text-xs font-bold text-brand-copper uppercase tracking-wider">Trendovi</span>
+                        <h3 class="text-xl font-bold mt-2 group-hover:text-brand-copper transition">Jesenski glamur</h3>
+                        <p class="text-stone-500 mt-2 text-sm line-clamp-2 font-medium">Frizure koje će dominirati eventima ove sezone - od glatkih punđi do...</p>
+                    </article>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontakt" class="bg-brand-dark text-white pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <img src="images/naljepnica.png" alt="Studio S Logo Footer" class="h-10 w-auto mb-6 brightness-0 invert">
+                    <p class="text-stone-400 leading-relaxed mb-6 font-medium">Frizerski studio posvećen ljepoti i zdravlju vaše kose. Vrhunska usluga u srcu Zagreba.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=100063476412222" target="_blank" class="text-stone-400 hover:text-white transition" aria-label="Facebook"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+                        <a href="https://www.instagram.com/explore/locations/1026787795/frizerskistudios/" target="_blank" class="text-stone-400 hover:text-white transition" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-brand-gold">Kontakt</h4>
+                    <ul class="space-y-4 text-stone-300 text-sm font-medium">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 mt-0.5 text-brand-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            Frankopanska 9, <br>10000 Zagreb
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <a href="tel:+385912254811" class="hover:text-white transition">+385 91 225 4811</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-brand-gold">Radno Vrijeme</h4>
+                    <ul class="space-y-2 text-stone-300 text-sm font-medium">
+                        <li class="flex justify-between"><span>Pon - Pet:</span> <span>08:00 - 18:00</span></li>
+                        <li class="flex justify-between"><span>Subota:</span> <span>08:00 - 15:00</span></li>
+                        <li class="flex justify-between text-stone-500"><span>Nedjelja:</span> <span>Zatvoreno</span></li>
+                        <li class="text-xs text-stone-500 mt-2 italic">Radi fizikalnih terapija radno vrijeme je po dogovoru do oporavka.</li>
+                    </ul>
                 </div>
                 
-                <div id="pricelist-content" class="max-w-4xl mx-auto bg-white/80 p-6 md:p-8 rounded-2xl shadow-lg space-y-8">
-                    <div class="overflow-x-auto">
-                        <div class="min-w-full text-sm">
-                            <div class="mb-6">
-                                <h3 class="text-xl font-bold text-stone-900 mb-4 pb-2">Ženske usluge</h3>
-                                <div class="grid grid-cols-4 gap-x-4 gap-y-2 pb-2 font-semibold text-stone-600 border-b border-stone-300/50">
-                                    <div class="col-span-1">Usluga</div>
-                                    <div class="text-right">Kratka</div>
-                                    <div class="text-right">Srednja</div>
-                                    <div class="text-right">Duga</div>
-                                </div>
-                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3 border-b border-stone-300/50 pb-3">
-                                    <div class="col-span-1 text-stone-800 font-medium">Pranje kose i frizura</div>
-                                    <div class="text-right font-semibold">12.00 €</div>
-                                    <div class="text-right font-semibold">14.00 €</div>
-                                    <div class="text-right font-semibold">16.00 €</div>
-                                </div>
-                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3">
-                                    <div class="col-span-1 text-stone-800 font-medium">Šišanje i frizura</div>
-                                    <div class="text-right font-semibold">25.00 €</div>
-                                    <div class="text-right font-semibold">28.00 €</div>
-                                    <div class="text-right font-semibold">30.00 €</div>
-                                </div>
-                            </div>
-                             <div class="mb-6">
-                                <h3 class="text-xl font-bold text-stone-900 mb-4 pb-2">Usluge bojanja</h3>
-                                <div class="grid grid-cols-4 gap-x-4 gap-y-2 pb-2 font-semibold text-stone-600 border-b border-stone-300/50">
-                                    <div class="col-span-1">Usluga</div>
-                                    <div class="text-right">Kratka</div>
-                                    <div class="text-right">Srednja</div>
-                                    <div class="text-right">Duga</div>
-                                </div>
-                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3 border-b border-stone-300/50 pb-3">
-                                    <div class="col-span-1 text-stone-800 font-medium">Bojanje i frizura</div>
-                                    <div class="text-right font-semibold">36.00 €</div>
-                                    <div class="text-right font-semibold">42.00 €</div>
-                                    <div class="text-right font-semibold">48.00 €</div>
-                                </div>
-                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3 border-b border-stone-300/50 pb-3">
-                                    <div class="col-span-1 text-stone-800 font-medium">Bojanje, šišanje i frizura</div>
-                                    <div class="text-right font-semibold">45.00 €</div>
-                                    <div class="text-right font-semibold">55.00 €</div>
-                                    <div class="text-right font-semibold">65.00 €</div>
-                                </div>
-                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3 border-b border-stone-300/50 pb-3">
-                                    <div class="col-span-1 text-stone-800 font-medium">Pramenovi i frizura</div>
-                                    <div class="text-right font-semibold">45.00 €</div>
-                                    <div class="text-right font-semibold">55.00 €</div>
-                                    <div class="text-right font-semibold">60.00 €</div>
-                                </div>
-                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3 border-b border-stone-300/50 pb-3">
-                                    <div class="col-span-1 text-stone-800 font-medium">Pramenovi, šišanje i frizura</div>
-                                    <div class="text-right font-semibold">55.00 €</div>
-                                    <div class="text-right font-semibold">65.00 €</div>
-                                    <div class="text-right font-semibold">75.00 €</div>
-                                </div>
-                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3 border-b border-stone-300/50 pb-3">
-                                    <div class="col-span-1 text-stone-800 font-medium">Ombre, šišanje i frizura</div>
-                                    <div class="text-right font-semibold">60.00 €</div>
-                                    <div class="text-right font-semibold">65.00 €</div>
-                                    <div class="text-right font-semibold">70.00 €</div>
-                                </div>
-                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3 border-b border-stone-300/50 pb-3">
-                                    <div class="col-span-1 text-stone-800 font-medium">Preljev, šišanje i frizura</div>
-                                    <div class="text-right font-semibold">36.00 €</div>
-                                    <div class="text-right font-semibold">42.00 €</div>
-                                    <div class="text-right font-semibold">48.00 €</div>
-                                </div>
-                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3 border-b border-stone-300/50 pb-3">
-                                    <div class="col-span-1 text-stone-800 font-medium">Minival, šišanje i frizura</div>
-                                    <div class="text-right font-semibold">40.00 €</div>
-                                    <div class="text-right font-semibold">47.00 €</div>
-                                    <div class="text-right font-semibold">54.00 €</div>
-                                </div>
-                                <div class="grid grid-cols-4 gap-x-4 gap-y-3 pt-3">
-                                    <div class="col-span-1 text-stone-800 font-medium">Svečana frizura</div>
-                                    <div class="text-right font-semibold">40.00 €</div>
-                                    <div class="text-right font-semibold">47.00 €</div>
-                                    <div class="text-right font-semibold">55.00 €</div>
-                                </div>
-                            </div>
-                            <div class="grid md:grid-cols-2 gap-x-8">
-                                <div>
-                                    <h3 class="text-xl font-bold text-stone-900 mb-4 pb-2">Specijalne usluge</h3>
-                                    <ul class="space-y-3 text-sm">
-                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Frizura valovi</span><span class="font-semibold text-stone-900">25.00 €</span></li>
-                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Riblja kost pletenica</span><span class="font-semibold text-stone-900">20.00 €</span></li>
-                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Skidanje pigmenta/prepigmentacija</span><span class="font-semibold text-stone-900">22.00 €</span></li>
-                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Patiniranje pramenova</span><span class="font-semibold text-stone-900">15.00 €</span></li>
-                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Maska/masaža/ampula</span><span class="font-semibold text-stone-900">(pojedinačno) 5.00 €</span></li>
-                                        <li class="flex justify-between items-center"><span class="text-stone-700">Skraćivanje šiški</span><span class="font-semibold text-stone-900">8.00 €</span></li>
-                                    </ul>
-                                </div>
-                                <div class="mt-6 md:mt-0">
-                                    <h3 class="text-xl font-bold text-stone-900 mb-4 pb-2">Muške i dječje usluge</h3>
-                                    <ul class="space-y-3 text-sm">
-                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Muško šišanje</span><span class="font-semibold text-stone-900">12.00 €</span></li>
-                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Muško šišanje i pranje</span><span class="font-semibold text-stone-900">15.00 €</span></li>
-                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Korekcija brade i brkova</span><span class="font-semibold text-stone-900">8.00 €</span></li>
-                                        <li class="flex justify-between items-center border-b border-stone-300/50 pb-2"><span class="text-stone-700">Dječije šišanje (Vrtić)</span><span class="font-semibold text-stone-900">10.00 €</span></li>
-                                        <li class="flex justify-between items-center"><span class="text-stone-700">Dječije šišanje (6-12 god.)</span><span class="font-semibold text-stone-900">14.00 €</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="h-48 rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.564748192134!2d15.969968876856525!3d45.8093149710815!2m3!1f0!2f0!3f0!3m2!i1024!i768!4f13.1!3m3!1m2!1s0x4765d6e2a2231509%3A0x695c7379203a382e!2sFrankopanska%20ul.%209%2C%2010000%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1714486518178!5m2!1shr!2shr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="Frizerski Studio S Lokacija"></iframe>
                 </div>
             </div>
-        </section>
-
-        <section id="galerija" class="py-20 bg-white/50">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Galerija Naših Radova</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <a href="images/25791130_1662153990514612_9020330882208578731_o.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/25791130_1662153990514612_9020330882208578731_o.jpg" alt="Frizura 1"></a>
-                    <a href="images/26910041_1689132931150051_3069930148032715234_o.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/26910041_1689132931150051_3069930148032715234_o.jpg" alt="Frizura 2"></a>
-                    <a href="images/33398225_1823132734416736_5750608583939063808_o.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/33398225_1823132734416736_5750608583939063808_o.jpg" alt="Frizura 3"></a>
-                    <a href="images/IMG-20201223-WA0002.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/IMG-20201223-WA0002.jpg" alt="Frizura 4"></a>
-                    <a href="images/IMG-20250416-WA0004.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/IMG-20250416-WA0004.jpg" alt="Frizura 5"></a>
-                    <a href="images/IMG-20250416-WA0005.jpg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/IMG-20250416-WA0005.jpg" alt="Frizura 6"></a>
-                    <a href="images/image00002.jpeg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/image00002.jpeg" alt="Frizura 7"></a>
-                    <a href="images/image00005.jpeg" class="block rounded-lg overflow-hidden"><img class="w-full aspect-[4/5] object-cover transition-transform duration-300 hover:scale-105" src="images/image00005.jpeg" alt="Frizura 8"></a>
-                </div>
+            
+            <div class="border-t border-stone-800 pt-8 text-center text-stone-500 text-sm font-medium">
+                <p>© <span id="currentYear"></span> Frizerski studio S. Sva prava pridržana.</p>
             </div>
-        </section>
+        </div>
+    </footer>
 
-        <section id="testimonials" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-stone-900 mb-12">Što Kažu Naši Klijenti</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    
-                    <div class="bg-white/80 p-6 rounded-2xl shadow-lg flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <h3 class="font-bold text-stone-900">Google Ocjena</h3>
-                                <svg class="w-6 h-6" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FBBC05" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#E94235" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#34A853" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.574l6.19,5.238C39.986,36.632,44,30.886,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path></svg>
-                            </div>
-                            <p class="text-stone-700 mb-2">Ukupna ocjena</p>
-                            <div class="flex items-center">
-                                <span class="text-4xl font-bold text-stone-800 mr-2">4.8</span>
-                                <div class="flex">
-                                    <svg class="w-5 h-5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    <svg class="w-5 h-5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    <svg class="w-5 h-5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    <svg class="w-5 h-5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    <svg class="w-5 h-5" fill="url(#starGradient)" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                            <linearGradient id="starGradient">
-                                                <stop offset="80%" stop-color="#F57C00"/>
-                                                <stop offset="80%" stop-color="#e5e7eb"/> </linearGradient>
-                                        </defs>
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <p class="text-sm text-stone-600 mt-1">Na temelju 23 ocjene</p>
-                        </div>
-                        <a href="https://www.google.com/search?q=Frizerski+studio+S+Frankopanska+9+Zagreb" target="_blank" rel="noopener noreferrer" class="mt-4 text-center text-brand-primary font-semibold hover:underline">Pročitajte sve recenzije</a>
-                    </div>
-
-                    <div class="bg-white/80 p-8 rounded-2xl shadow-lg">
-                        <p class="text-stone-700 italic">"Nakon godina traženja, napokon sam pronašla salon kojem vjerujem. Svaki put izađem s osmijehom i savršenom bojom. Najbolja usluga u gradu!"</p>
-                        <p class="mt-4 font-bold text-stone-900">- Ana K.</p>
-                    </div>
-                    <div class="bg-white/80 p-8 rounded-2xl shadow-lg">
-                        <p class="text-stone-700 italic">"Profesionalnost i stručnost na najvišoj razini. Uvijek točno znaju što želim, čak i kad ja ne znam objasniti. Preporuka svima!"</p>
-                        <p class="mt-4 font-bold text-stone-900">- Marko P.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="blog" class="py-20 bg-gradient-to-b from-brand-background via-white to-brand-background">
-            <div class="container mx-auto px-6">
-                <div class="max-w-3xl mx-auto text-center mb-16">
-                    <p class="text-xs uppercase tracking-[0.4em] text-brand-primary font-semibold">Blog</p>
-                    <h2 class="text-3xl font-bold text-stone-900 mt-3">Savjeti za zdravu i stiliziranu kosu</h2>
-                    <p class="mt-4 text-stone-700">Brzi pregledi tema koje detaljno razrađujemo na blogu. Klikom na karticu otkrijte cijeli vodič i dodatne preporuke stručnog tima iz Frankopanske.</p>
-                    <a href="blog/index.html" class="mt-6 inline-flex items-center justify-center gap-2 bg-brand-primary text-white font-semibold px-6 py-3 rounded-full shadow-xl hover:bg-brand-accent transition" aria-label="Otvori blog Frizerskog studija S">Otvori blog<span aria-hidden="true">→</span></a>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <article class="relative rounded-[32px] overflow-hidden min-h-[320px] text-white shadow-2xl group" itemscope itemtype="https://schema.org/BlogPosting">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 scale-105 group-hover:scale-110" style="background-image:url('images/26910041_1689132931150051_3069930148032715234_o.jpg');"></div>
-                        <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80"></div>
-                        <div class="relative h-full flex flex-col justify-between p-6">
-                            <div>
-                                <p class="text-xs uppercase tracking-[0.3em] text-white/70">Njega kose · <time datetime="2025-11-15" itemprop="datePublished">15.11.2025.</time></p>
-                                <h3 class="text-2xl font-semibold mt-3" itemprop="headline">Ljetna rutina za plavu kosu</h3>
-                                <p class="mt-3 text-sm text-white/85" itemprop="description">Sačuvajte hladne tonove i elastičnost kose uz UV zaštitu i hladnije pranje.</p>
-                            </div>
-                            <div class="flex items-center gap-2 text-sm font-semibold">
-                                <a href="blog/ljetna-rutina-plava-kosa.html" class="inline-flex items-center gap-2" itemprop="url" aria-label="Ljetna rutina za plavu kosu - otvori članak">Čitaj članak<span aria-hidden="true">→</span></a>
-                            </div>
-                        </div>
-                        <meta itemprop="author" content="Frizerski studio S">
-                        <meta itemprop="mainEntityOfPage" content="https://frizerskistudios.com/blog/ljetna-rutina-plava-kosa.html">
-                        <meta itemprop="image" content="https://frizerskistudios.com/images/26910041_1689132931150051_3069930148032715234_o.jpg">
-                    </article>
-
-                    <article class="relative rounded-[32px] overflow-hidden min-h-[320px] text-white shadow-2xl group" itemscope itemtype="https://schema.org/BlogPosting">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 scale-105 group-hover:scale-110" style="background-image:url('images/IMG-20250416-WA0005.jpg');"></div>
-                        <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80"></div>
-                        <div class="relative h-full flex flex-col justify-between p-6">
-                            <div>
-                                <p class="text-xs uppercase tracking-[0.3em] text-white/70">Zdravo vlasište · <time datetime="2025-10-02" itemprop="datePublished">02.10.2025.</time></p>
-                                <h3 class="text-2xl font-semibold mt-3" itemprop="headline">Kako obnoviti vlasište</h3>
-                                <p class="mt-3 text-sm text-white/85" itemprop="description">Piling, ampule i masaže koje smiruju osjetljivu kožu nakon bojanja.</p>
-                            </div>
-                            <div class="flex items-center gap-2 text-sm font-semibold">
-                                <a href="blog/obnova-vlasista-nakon-bojanja.html" class="inline-flex items-center gap-2" itemprop="url" aria-label="Kako obnoviti vlasište nakon bojanja - otvori članak">Čitaj članak<span aria-hidden="true">→</span></a>
-                            </div>
-                        </div>
-                        <meta itemprop="author" content="Frizerski studio S">
-                        <meta itemprop="mainEntityOfPage" content="https://frizerskistudios.com/blog/obnova-vlasista-nakon-bojanja.html">
-                        <meta itemprop="image" content="https://frizerskistudios.com/images/IMG-20250416-WA0005.jpg">
-                    </article>
-
-                    <article class="relative rounded-[32px] overflow-hidden min-h-[320px] text-white shadow-2xl group" itemscope itemtype="https://schema.org/BlogPosting">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 scale-105 group-hover:scale-110" style="background-image:url('images/IMG-20201223-WA0002.jpg');"></div>
-                        <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80"></div>
-                        <div class="relative h-full flex flex-col justify-between p-6">
-                            <div>
-                                <p class="text-xs uppercase tracking-[0.3em] text-white/70">Trendovi · <time datetime="2025-09-12" itemprop="datePublished">12.09.2025.</time></p>
-                                <h3 class="text-2xl font-semibold mt-3" itemprop="headline">Jesenski eventi &amp; glam</h3>
-                                <p class="mt-3 text-sm text-white/85" itemprop="description">Punđe, valovi i sleek krojevi koji traju cijelu večer i izgledaju sjajno na fotografijama.</p>
-                            </div>
-                            <div class="flex items-center gap-2 text-sm font-semibold">
-                                <a href="blog/jesenske-svecane-frizure.html" class="inline-flex items-center gap-2" itemprop="url" aria-label="Top frizure za jesenske evente - otvori članak">Čitaj članak<span aria-hidden="true">→</span></a>
-                            </div>
-                        </div>
-                        <meta itemprop="author" content="Frizerski studio S">
-                        <meta itemprop="mainEntityOfPage" content="https://frizerskistudios.com/blog/jesenske-svecane-frizure.html">
-                        <meta itemprop="image" content="https://frizerskistudios.com/images/IMG-20201223-WA0002.jpg">
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="kontakt" class="py-20">
-            <div class="container mx-auto px-6">
-                <div class="text-center">
-                    <h2 class="text-3xl font-bold text-stone-900">Kontaktirajte Nas</h2>
-                    <p class="mt-2 text-stone-700">Spremni za transformaciju? Nazovite nas ili nas posjetite.</p>
-                    <a href="tel:+385912254811" class="mt-8 inline-block bg-brand-primary text-white font-bold text-lg py-4 px-10 rounded-xl transition-transform duration-300 hover:bg-brand-accent hover:scale-105">Nazovite za Termin</a>
-                </div>
-                <div class="mt-12 flex flex-col md:flex-row gap-8">
-                    <div class="md:w-1/2 bg-white/80 p-8 rounded-2xl shadow-lg">
-                        <h3 class="text-xl font-bold text-stone-900 mb-4">Informacije</h3>
-                        <div class="space-y-4 text-stone-700">
-                            <p><strong>Adresa:</strong><br>Frankopanska 9, 10000 Zagreb</p>
-                            <p><strong>Telefon:</strong><br><a href="tel:+385912254811" class="text-brand-primary hover:underline">+385 91 225 4811</a></p>
-                            <p><strong>Radno vrijeme:</strong><br>Pon - Pet: 08:00 - 18:00<br>Sub: 08:00 - 15:00<br>Radi fizikalnih terapija radno vrijeme je po dogovoru do oporavka.</p>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2 h-80 md:h-auto rounded-2xl shadow-lg overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.564748192134!2d15.969968876856525!3d45.8093149710815!2m3!1f0!2f0!3f0!3m2!i1024!i768!4f13.1!3m3!1m2!1s0x4765d6e2a2231509%3A0x695c7379203a382e!2sFrankopanska%20ul.%209%2C%2010000%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1714486518178!5m2!1shr!2shr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <a href="tel:+385912254811" class="md:hidden fixed bottom-6 right-6 bg-brand-copper text-white p-4 rounded-full shadow-2xl z-50 flex items-center justify-center animate-bounce" aria-label="Nazovi odmah">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+    </a>
 
     <script>
-        const yearEl = document.getElementById('currentYear');
-        if (yearEl) {
-            yearEl.textContent = new Date().getFullYear();
-        }
+        // Year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
         });
 
-        const menuLinks = mobileMenu.getElementsByTagName('a');
-        for (let i = 0; i < menuLinks.length; i++) {
-            menuLinks[i].addEventListener('click', () => {
-                mobileMenu.style.display = 'none';
-                mobileMenuButton.setAttribute('aria-expanded', 'false');
+        // Close menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
             });
-        }
-
-        const toggleBtn = document.getElementById('toggle-pricelist-btn');
-        const pricelistContent = document.getElementById('pricelist-content');
-
-        toggleBtn.addEventListener('click', () => {
-            pricelistContent.classList.toggle('pricelist-hidden');
-            if (pricelistContent.classList.contains('pricelist-hidden')) {
-                toggleBtn.textContent = 'Prikaži Cjenik';
-            } else {
-                toggleBtn.textContent = 'Sakrij Cjenik';
-            }
         });
 
-        const animateCountUp = (el, target, duration = 2000) => {
-            let start = 0;
-            const finalTarget = parseInt(target, 10);
-            let startTime = null;
-
+        // Count Up Animation
+        const animateValue = (id, start, end, duration) => {
+            const obj = document.getElementById(id);
+            if (!obj) return;
+            let startTimestamp = null;
             const step = (timestamp) => {
-                if (!startTime) startTime = timestamp;
-                const progress = Math.min((timestamp - startTime) / duration, 1);
-                el.textContent = Math.floor(progress * finalTarget);
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start) + "+";
                 if (progress < 1) {
                     window.requestAnimationFrame(step);
-                } else {
-                    el.textContent = finalTarget; 
                 }
             };
             window.requestAnimationFrame(step);
-        };
+        }
 
-        const statsSection = document.getElementById('stats-section');
-        const statExperience = document.getElementById('stat-experience');
-        const statClients = document.getElementById('stat-clients');
-
-        const observer = new IntersectionObserver((entries, observer) => {
+        // Trigger animation on scroll
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateCountUp(statExperience, 30);
-                    animateCountUp(statClients, 2000);
-                    observer.disconnect(); 
+                    animateValue("stat-years", 0, 30, 2000);
+                    animateValue("stat-clients", 0, 2000, 2500);
+                    observer.disconnect();
                 }
             });
-        }, { threshold: 0.5 }); 
+        });
+        
+        const stats = document.querySelector('#stat-years');
+        if(stats) observer.observe(stats.parentElement);
 
-        observer.observe(statsSection);
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

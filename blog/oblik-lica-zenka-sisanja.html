@@ -1,47 +1,49 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="hr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odabir šišanja prema obliku lica | Frizerski studio S</title>
     <meta name="description" content="Vodič Frizerskog studija S: kako odabrati žensko šišanje prema obliku lica, gustoći kose i lifestyleu u Zagrebu.">
     <link rel="canonical" href="https://frizerskistudios.com/blog/oblik-lica-zenka-sisanja.html">
+    
     <meta property="og:type" content="article">
     <meta property="og:title" content="Odabir šišanja prema obliku lica">
     <meta property="og:description" content="Praktični savjeti za ovalno, okruglo, srcoliko i četvrtasto lice.">
     <meta property="og:url" content="https://frizerskistudios.com/blog/oblik-lica-zenka-sisanja.html">
     <meta property="og:image" content="https://frizerskistudios.com/images/image00005.jpeg">
-    <meta property="og:locale" content="hr_HR">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Odabir šišanja prema obliku lica">
-    <meta name="twitter:description" content="Personalizirane preporuke Frizerskog studija S iz Zagreba.">
-    <meta name="twitter:image" content="https://frizerskistudios.com/images/image00005.jpeg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="icon" type="image/png" href="../images/naljepnica.png">
-    <link rel="apple-touch-icon" href="../images/naljepnica.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
                     colors: {
-                        'brand-background': '#F4F1ED',
-                        'brand-text': '#44403c',
-                        'brand-primary': '#F57C00',
-                        'brand-accent': '#D87000'
+                        'brand-bg': '#FAFAF9',
+                        'brand-dark': '#1C1917',
+                        'brand-copper': '#C27848',
+                        'brand-gold': '#D4A373',
+                        'brand-soft': '#E7E5E4'
                     }
                 }
             }
         }
     </script>
+    
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://frizerskistudios.com/blog/oblik-lica-zenka-sisanja.html"
-        },
         "headline": "Odabir šišanja prema obliku lica",
         "description": "Savjeti Frizerskog studija S za pronalazak savršenog kroja kose ovisno o obliku lica.",
         "image": "https://frizerskistudios.com/images/image00005.jpeg",
@@ -57,96 +59,233 @@
                 "url": "https://frizerskistudios.com/images/naljepnica.png"
             }
         },
-        "datePublished": "2025-07-10",
-        "dateModified": "2025-12-05"
+        "datePublished": "2025-07-10"
     }
     </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        /* Custom styling for article content */
+        article h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1C1917;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        article p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #57534e;
+        }
+        article ul, article ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #57534e;
+        }
+        article ul { list-style-type: disc; }
+        article ol { list-style-type: decimal; }
+        article li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
-<body class="bg-brand-background text-brand-text">
-    <header class="bg-white/80 border-b border-black/10">
-        <div class="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
-            <a href="../index.html" class="font-semibold">← Početna</a>
-            <a href="index.html" class="text-brand-primary font-semibold">Svi blogovi</a>
+<body class="bg-brand-bg text-brand-dark font-sans antialiased selection:bg-brand-copper selection:text-white flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 glass-nav border-b border-stone-200/50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="flex items-center gap-3 group">
+                    <img src="../images/naljepnica.png" alt="Studio S Logo" class="h-10 w-auto transition-transform duration-300 group-hover:scale-105">
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide">
+                    <a href="../index.html#usluge" class="hover:text-brand-copper transition-colors">USLUGE</a>
+                    <a href="../index.html#cjenik" class="hover:text-brand-copper transition-colors">CJENIK</a>
+                    <a href="index.html" class="text-brand-copper font-bold">BLOG</a>
+                    <a href="../index.html#kontakt" class="hover:text-brand-copper transition-colors">KONTAKT</a>
+                    <a href="tel:+385912254811" class="bg-brand-dark text-white px-6 py-2.5 rounded-full hover:bg-brand-copper transition-all transform hover:scale-105 shadow-lg font-bold">
+                        Rezerviraj
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-brand-dark focus:outline-none p-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-t border-stone-100 shadow-xl py-6 px-6 flex-col space-y-4 font-medium">
+                <a href="../index.html#usluge" class="block text-lg border-b border-stone-100 pb-2">Usluge</a>
+                <a href="../index.html#cjenik" class="block text-lg border-b border-stone-100 pb-2">Cjenik</a>
+                <a href="index.html" class="block text-lg border-b border-stone-100 pb-2 text-brand-copper">Blog</a>
+                <a href="../index.html#kontakt" class="block text-lg border-b border-stone-100 pb-2">Kontakt</a>
+                <a href="tel:+385912254811" class="block text-center bg-brand-copper text-white py-3 rounded-lg mt-4 font-bold shadow-md">Nazovite nas</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-10 md:pt-40 md:pb-16 container mx-auto px-6 max-w-4xl text-center">
+        <div class="flex items-center justify-center gap-4 text-xs font-bold uppercase tracking-widest mb-6">
+            <span class="text-brand-copper">Vodič</span>
+            <span class="text-stone-300">•</span>
+            <span class="text-stone-500">10.07.2025.</span>
+        </div>
+        <h1 class="text-3xl md:text-5xl font-extrabold text-brand-dark mb-8 leading-tight">Odabir šišanja prema obliku lica</h1>
+        <div class="rounded-3xl overflow-hidden shadow-2xl aspect-video relative">
+            <img src="../images/image00005.jpeg" alt="Šišanje i oblikovanje u Studio S" class="w-full h-full object-cover">
         </div>
     </header>
 
-    <main class="max-w-3xl mx-auto px-6 py-12 space-y-10">
-        <article class="space-y-6">
-            <p class="text-sm uppercase tracking-[0.3em] text-brand-primary">Vodič za šišanje</p>
-            <h1 class="text-4xl font-bold">Odabir šišanja prema obliku lica</h1>
-            <p class="text-stone-500 text-sm">Frizerski studio S · 10. srpnja 2025.</p>
-            <p class="text-lg">Pravi kroj kose naglašava crte lica i skraćuje vrijeme oblikovanja. Kako bismo vam olakšali razgovor na konzultacijama u Frankopanskoj, pripremili smo pregled preporuka za četiri najčešća oblika lica.</p>
+    <main class="container mx-auto px-6 pb-24 max-w-3xl">
+        <article class="text-lg">
+            <p class="lead font-medium text-xl text-brand-dark mb-10">
+                Pravi kroj kose ne samo da naglašava vaše najljepše crte lica, već i značajno skraćuje vrijeme potrebno za jutarnje oblikovanje. Kako bismo vam olakšali razgovor na konzultacijama u Frankopanskoj, pripremili smo pregled preporuka za četiri najčešća oblika lica.
+            </p>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 mb-10">
+                <h2 class="!mt-0">Ovalno lice</h2>
+                <p>Ovalni oblik smatra se idealnim jer dopušta najviše eksperimentiranja. Najbolje izgledaju slojeviti "lob" (long bob) krojevi s blagim valovima ili moderne mikro-šiške koje ističu oči.</p>
+                <ul class="!mb-0">
+                    <li><strong>Stil:</strong> Dodajte teksturu solnim sprejem za "effortless" izgled.</li>
+                    <li><strong>Održavanje:</strong> Planirajte korekciju svakih 8 tjedana kako bi linije ostale čiste i definirane.</li>
+                </ul>
+            </div>
+
+            <h2>Okruglo lice</h2>
+            <p>Kod okruglog lica cilj je vizualno izdužiti konture. Biramo frizure koje dodaju visinu ili duljinu, poput dugih slojeva, "curtain" šiški i asimetričnog boba.</p>
+            
+            <div class="grid md:grid-cols-2 gap-6 my-8">
+                <div class="bg-brand-soft/30 rounded-xl p-6 border border-brand-soft">
+                    <h3 class="font-bold text-lg mb-2 text-brand-dark">Preporučujemo</h3>
+                    <p class="!mb-0 text-sm">Visoko postavljeni repovi i valovi koji kreću od sredine prema vrhovima kako bi otvorili lice.</p>
+                </div>
+                <div class="bg-brand-soft/30 rounded-xl p-6 border border-brand-soft">
+                    <h3 class="font-bold text-lg mb-2 text-brand-dark">Izbjegavajte</h3>
+                    <p class="!mb-0 text-sm">Jako kratke, pune i ravne šiške te frizure koje završavaju točno u razini brade jer dodatno zaobljuju lice.</p>
+                </div>
+            </div>
+
+            <h2>Srcoliko lice</h2>
+            <p>Ovaj oblik karakterizira šire čelo i uža brada. Balansiramo proporcije dodavanjem volumena u donjem dijelu lica (ispod jagodica) i mekanim šiškama.</p>
+
+            <div class="overflow-x-auto rounded-xl border border-stone-200 shadow-sm mb-10">
+                <table class="w-full text-sm text-left bg-white">
+                    <thead class="bg-brand-bg text-brand-dark font-bold uppercase text-xs">
+                        <tr>
+                            <th class="px-6 py-4">Prijedlog</th>
+                            <th class="px-6 py-4">Opis</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-stone-100">
+                        <tr>
+                            <td class="px-6 py-4 font-semibold">Midi shag</td>
+                            <td class="px-6 py-4 text-stone-600">Kombinacija kraćih slojeva na tjemenu i dužih pramenova uz lice za moderan izgled.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-semibold">Side bang</td>
+                            <td class="px-6 py-4 text-stone-600">Šiške začešljane na stranu, zaobljene četkom, savršeno naglašavaju oči i jagodice.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Četvrtasto lice</h2>
+            <p>Kod četvrtastog lica želimo ublažiti oštre kutove čeljusti. To postižemo slojevima i mekim, lepršavim linijama. Feniranje s okruglom četkom je ključno.</p>
+            <ol>
+                <li>Slojevi bi trebali počinjati ispod brade kako bi rubovi lica djelovali mekše.</li>
+                <li>Dodajte <a href="balayage-vodic-zagreb.html" class="text-brand-copper font-bold hover:underline">balayage</a> pramenove koji vizualno omekšavaju linije lica.</li>
+                <li>Za finiš koristite proizvode za fleksibilan sjaj, a izbjegavajte kruti lak za kosu.</li>
+            </ol>
+
+            <h2>Kako izgleda konzultacija u salonu?</h2>
+            <p>Svako šišanje započinje razgovorom od 15-20 minuta. Analiziramo vaš profil, gustoću i teksturu kose te vaše navike stiliziranja kod kuće. Tek nakon toga definiramo termin za šišanje i, po potrebi, bojanje.</p>
         </article>
 
-        <section class="bg-white rounded-2xl shadow p-6 space-y-4">
-            <h2 class="text-2xl font-semibold">Ovalno lice</h2>
-            <p>Ovalni oblik dopušta eksperimentiranje. Najbolje izgledaju slojeviti lob krojevi s blagim valovima ili mikro-šiške koje ističu oči.</p>
-            <ul class="list-disc pl-6 text-sm text-stone-700 space-y-1">
-                <li>Dodajte teksturu solnim sprejem za effortless izgled.</li>
-                <li>Planirajte korekciju svakih 8 tjedana kako bi linije ostale čiste.</li>
-            </ul>
-        </section>
-
-        <section class="bg-white rounded-2xl shadow p-6 space-y-4">
-            <h2 class="text-2xl font-semibold">Okruglo lice</h2>
-            <p>Biramo frizure koje vizualno izdužuju lice: dugi slojevi, curtain šiške i asimetrični bob.</p>
-            <div class="grid md:grid-cols-2 gap-4 text-sm text-stone-700">
-                <div class="bg-brand-background/60 rounded-xl p-4">
-                    <h3 class="font-semibold">Da</h3>
-                    <p>Visoko postavljeni repovi i valovi od sredine prema vrhovima.</p>
-                </div>
-                <div class="bg-brand-background/60 rounded-xl p-4">
-                    <h3 class="font-semibold">Izbjegavajte</h3>
-                    <p>Jako kratke, pune šiške koje skraćuju lice.</p>
+        <div class="mt-16 bg-brand-dark rounded-3xl p-10 md:p-12 text-center text-white relative overflow-hidden shadow-2xl">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-brand-copper/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="relative z-10">
+                <h2 class="text-2xl md:text-3xl font-extrabold mb-4 tracking-tight">Spremni za novi izgled?</h2>
+                <p class="text-stone-400 max-w-lg mx-auto mb-8 font-medium">Posjetite nas na Frankopanskoj 9 i prepustite se rukama stručnjaka koji će pronaći savršen kroj za vas.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:+385912254811" class="bg-brand-copper text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-brand-dark transition-all">Rezerviraj Termin</a>
                 </div>
             </div>
-        </section>
-
-        <section class="bg-white rounded-2xl shadow p-6 space-y-4">
-            <h2 class="text-2xl font-semibold">Srcoliko lice</h2>
-            <p>Balansiramo širinu čela i uže brade. Najbolje funkcioniraju frizure s volumenom ispod jagodica i mekane šiške u obliku zastora.</p>
-            <table class="w-full text-sm text-left">
-                <thead>
-                    <tr class="text-stone-500 uppercase text-xs">
-                        <th class="py-2">Prijedlog</th>
-                        <th class="py-2">Opis</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="border-t border-stone-200">
-                        <td class="py-3">Midi shag</td>
-                        <td>Kombinacija kraćih slojeva na tjemenu i dužih pramenova uz lice.</td>
-                    </tr>
-                    <tr class="border-t border-stone-200">
-                        <td class="py-3">Side bang</td>
-                        <td>Šiške zaobljene četkom naglašavaju oči.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section class="bg-white rounded-2xl shadow p-6 space-y-4">
-            <h2 class="text-2xl font-semibold">Četvrtasto lice</h2>
-            <p>Ublažavamo kutove slojevima i mekim linijama. Feniranje s okruglom četkom i zakošene šiške smanjuju naglašenu čeljust.</p>
-            <ol class="list-decimal pl-6 text-sm text-stone-700 space-y-1">
-                <li>Slojevi koji počinju ispod brade kako bi rubovi bili mekši.</li>
-                <li>Dodajte balayage koji omekšava linije lica.</li>
-                <li>Koristite proizvode za fleksibilan sjaj, a ne tvrdi lak.</li>
-            </ol>
-        </section>
-
-        <section class="space-y-4">
-            <h2 class="text-2xl font-semibold">Kako izgleda konzultacija u salonu?</h2>
-            <p>Traje 20 minuta i uključuje fotografiranje profila, analizu gustoće kose te preporuku proizvoda za stiliziranje kod kuće. Nakon toga definiramo termin za šišanje i eventualno bojanje.</p>
-        </section>
-
-        <section class="bg-brand-primary text-white rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-                <h2 class="text-2xl font-semibold">Rezervirajte personalizirano šišanje</h2>
-                <p class="text-sm text-white/90">Frankopanska 9 · Zagreb</p>
-            </div>
-            <a href="tel:+385912254811" class="bg-white text-brand-primary font-semibold px-6 py-3 rounded-lg text-center">Dogovori termin</a>
-        </section>
+        </div>
+        
+        <div class="mt-12 text-center">
+             <a href="index.html" class="text-brand-copper font-bold hover:underline">← Povratak na sve članke</a>
+        </div>
     </main>
+
+    <footer id="kontakt" class="bg-brand-dark text-white pt-20 pb-10 border-t border-stone-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <img src="../images/naljepnica.png" alt="Studio S Logo Footer" class="h-10 w-auto mb-6 brightness-0 invert">
+                    <p class="text-stone-400 leading-relaxed mb-6 font-medium">Frizerski studio posvećen ljepoti i zdravlju vaše kose. Vrhunska usluga u srcu Zagreba.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=100063476412222" target="_blank" class="text-stone-400 hover:text-white transition" aria-label="Facebook"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+                        <a href="https://www.instagram.com/explore/locations/1026787795/frizerskistudios/" target="_blank" class="text-stone-400 hover:text-white transition" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-brand-gold">Kontakt</h4>
+                    <ul class="space-y-4 text-stone-300 text-sm font-medium">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 mt-0.5 text-brand-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            Frankopanska 9, <br>10000 Zagreb
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <a href="tel:+385912254811" class="hover:text-white transition">+385 91 225 4811</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-brand-gold">Radno Vrijeme</h4>
+                    <ul class="space-y-2 text-stone-300 text-sm font-medium">
+                        <li class="flex justify-between"><span>Pon - Pet:</span> <span>08:00 - 18:00</span></li>
+                        <li class="flex justify-between"><span>Subota:</span> <span>08:00 - 15:00</span></li>
+                        <li class="flex justify-between text-stone-500"><span>Nedjelja:</span> <span>Zatvoreno</span></li>
+                        <li class="text-xs text-stone-500 mt-2 italic">Radi fizikalnih terapija radno vrijeme je po dogovoru do oporavka.</li>
+                    </ul>
+                </div>
+                
+                <div class="h-48 rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.564748192134!2d15.969968876856525!3d45.8093149710815!2m3!1f0!2f0!3f0!3m2!i1024!i768!4f13.1!3m3!1m2!1s0x4765d6e2a2231509%3A0x695c7379203a382e!2sFrankopanska%20ul.%209%2C%2010000%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1714486518178!5m2!1shr!2shr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="Frizerski Studio S Lokacija"></iframe>
+                </div>
+            </div>
+            
+            <div class="border-t border-stone-800 pt-8 text-center text-stone-500 text-sm font-medium">
+                <p>© <span id="currentYear"></span> Frizerski studio S. Sva prava pridržana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if(btn && menu){
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('flex');
+            });
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    menu.classList.remove('flex');
+                });
+            });
+        }
+    </script>
 </body>
 </html>
