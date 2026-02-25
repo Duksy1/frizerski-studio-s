@@ -1,0 +1,37 @@
+# Frizerski studio S - robots.txt
+
+# Dozvoli svim tražilicama indeksiranje
+User-agent: *
+Content-Signal: search=yes,ai-train=no
+Allow: /
+
+# Blokiraj AI botove koji scrapeaju sadržaj za treniranje modela
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF
+# RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT
+# AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.
+
+Sitemap: https://frizerskistudios.com/sitemap.xml
