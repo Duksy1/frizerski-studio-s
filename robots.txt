@@ -2,7 +2,6 @@
 
 # Dozvoli svim tražilicama indeksiranje
 User-agent: *
-Content-Signal: search=yes,ai-train=no
 Allow: /
 
 # Blokiraj AI botove koji scrapeaju sadržaj za treniranje modela
