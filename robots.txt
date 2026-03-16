@@ -4,6 +4,9 @@
 User-agent: *
 Allow: /
 
+# Sitemap lokacija
+Sitemap: https://frizerskistudios.com/sitemap.xml
+
 # Blokiraj AI botove koji scrapeaju sadržaj za treniranje modela
 User-agent: Amazonbot
 Disallow: /
