@@ -35,43 +35,11 @@
     <meta name="twitter:description" content="Profesionalno šišanje, bojanje, balayage i svečane frizure. 30+ godina u centru Zagreba.">
     <meta name="twitter:image" content="https://frizerskistudios.com/images/IMG-20250416-WA0004.jpg">
     
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/montserrat-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="images/naljepnica.png">
-    <link rel="preload" as="image" href="images/frizerskistudios pozadina.jpg">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'], // Sada je Montserrat glavni font za sve
-                    },
-                    colors: {
-                        'brand-bg': '#FAFAF9', // Topla bijela/siva
-                        'brand-dark': '#1C1917', // Mekana crna
-                        'brand-copper': '#C27848', // Moderna bakrena boja
-                        'brand-gold': '#D4A373', // Zlatni detalji
-                        'brand-soft': '#E7E5E4'
-                    },
-                    letterSpacing: {
-                        tighter: '-0.05em',
-                        tight: '-0.025em',
-                        normal: '0',
-                        wide: '0.025em',
-                        wider: '0.05em',
-                        widest: '0.1em',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="preload" as="image" href="images/frizerskistudios-pozadina.webp">
 
     <script type="application/ld+json">
     {
@@ -360,7 +328,7 @@
 
     <header id="home" class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="images/frizerskistudios pozadina.jpg" alt="Interijer Frizerskog studija S u Zagrebu" class="w-full h-full object-cover object-center scale-105 animate-[pulse_10s_ease-in-out_infinite_alternate]" fetchpriority="high">
+            <img src="images/frizerskistudios-pozadina.webp" alt="Interijer Frizerskog studija S u Zagrebu" class="w-full h-full object-cover object-center scale-105 animate-[pulse_10s_ease-in-out_infinite_alternate]" fetchpriority="high">
             <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/30"></div>
         </div>
 
